@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Footer.css'; // CSS 파일 경로 확인
 
 function Footer() {
   return (

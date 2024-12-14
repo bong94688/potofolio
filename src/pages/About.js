@@ -64,23 +64,23 @@ function About() {
   </div>
 </div>
 <div className="about-content" data-aos="fade-right">
-<div className="text">
-          
-          <h2>About Me</h2>
-  
-          <p>
-<strong>안녕하세요.</strong> 저는 웹과 앱 개발에 열정을 가진 개발자 심봉교입니다. 컴퓨터 시스템 전공을 기반으로 
-이론과 실무를 병행하며, 다양한 프로젝트를 통해 전문성을 키워왔습니다. 주요 프로젝트로는 
-<strong>시각장애인을 위한 쇼핑 솔루션 "아이쇼핑(Eye(I)Shopping)"</strong>이 있으며, 머신러닝과 ChatGPT를 활용해 
-정보 접근성을 개선하고 사용자 중심의 기능을 설계했습니다. 또한, <strong>"맛자취"</strong> 프로젝트에서는 
-클라우드 기반의 CI/CD 파이프라인 구축과 실시간 위치 기반 서비스를 성공적으로 구현한 경험이 있습니다.
-</p>
-<p>
-<strong>목표 및 비전</strong>은 효율적인 코드를 작성하며 사용자 중심의 서비스를 제공하는 개발자가 되는 것입니다. 
-더 나아가 인공지능 기술을 활용하여 더 나은 디지털 환경을 만들어 나가고자 합니다.
-</p>
-        </div>
+  <div className="text">
+    <h2>About Me</h2>
+    <p>
+      <strong>안녕하세요.</strong> 저는 안정적인 시스템 설계와 확장을 중점적으로 고민하며 성장해 온 백엔드 개발자 심봉교입니다.
+      효율적인 시스템 구축과 데이터 처리 최적화를 목표로 다양한 프로젝트를 진행하며 강점을 키워왔습니다.
+    </p>
+    <p>
+      Spring Boot와 MySQL을 기반으로 설계와 확장이 가능한 시스템 구현을 경험했습니다. 특히, 간단한 채팅 애플리케이션에서부터 
+      대규모 서비스 부하 테스트를 최적화하며 성능 최적화와 문제 해결 능력을 개발했습니다. 또한, API 효율성을 높이고,
+      JWT를 활용한 인증 및 권한 관리를 통해 보안성과 확장성을 모두 만족시키는 작업에 기여한 경험이 있습니다.
+    </p>
+    <p>
+      앞으로도 이러한 경험을 바탕으로 더욱 안정적이고 성능 높은 서비스를 운영 및 개발하며 성장을 지속해 나가고자 합니다.
+    </p>
+  </div>
 </div>
+
 <div className="about-content" data-aos="fade-right">
         <div className="info-content career-content">
           <h2><i className="fas fa-briefcase"></i> Career</h2>
@@ -163,29 +163,90 @@ function About() {
 
       {/* Activity Section */}
       <div className="about-content" data-aos="fade-right">
-      <div className="info-content">
-      <h2>Activities</h2>
-          <p>
-            <strong>2023.04 ~ 2023.09</strong> 네이버클라우드 교육과정 수료
-          </p>
-          <p>NCP 교육과 웹 풀스택 교육</p>
-          <p>
-            <strong>2023.05 ~ 2023.06</strong> K-DigitalTraining 해커톤 대회
-          </p>
-          <p>총 3회 멘토링 기회</p>
-          <p>
-            <strong>2023.07 ~ 2023.08</strong> [코-취] 구로청년이룸 '코-취'(우수 수료자)
-          </p>
-          <p>알고리즘 교육 과 기업과제 </p>
-          <p>
-            <strong>2023.08 ~ 2023.10</strong> 프리온보딩 백엔드 인턴쉽
-          </p>
-          <p></p>
-          <p>
-            <strong>2023.08 ~ 2023.10</strong> 공개SW 개발자대회 출품
-          </p>
-        </div>
-      </div>
+  <div className="info-content">
+    <h2>Activities</h2>
+
+    <div className="activity-item">
+      <h3>2023.04 ~ 2023.09</h3>
+      <p><strong>네이버클라우드 교육과정 수료</strong></p>
+      <p>
+        NCP를 활용하여 클라우드 기반 웹 애플리케이션 개발을 진행했습니다. 
+        교육 과정 중 클라우드 아키텍처 설계, 서버 배포 및 모니터링을 학습하였고, 팀 프로젝트를 통해 NCP 스토리지와 
+        API Gateway를 연동해 실무 환경을 경험했습니다.
+      </p>
+      <ul>
+        <li>주요 기술: NCP, Docker, Kubernetes</li>
+        <li>성과: 팀 프로젝트 리더로 프로젝트의 CI/CD 파이프라인 설계 및 구축</li>
+      </ul>
+    </div>
+
+    <div className="activity-item">
+      <h3>2023.05 ~ 2023.06</h3>
+      <p><strong>K-DigitalTraining 해커톤 대회</strong></p>
+      <p>
+        AI 모델 학습 데이터의 정확도를 개선하기 위해 데이터 전처리 및 하이퍼파라미터 튜닝을 수행했습니다. 
+        구현 아키텍처의 효율성을 검토받으며, 서비스 배포 시 예상 문제점에 대한 피드백을 통해 시스템을 보완하였습니다.
+      </p>
+      <ul>
+        <li>주요 기술: Python, TensorFlow, Flask</li>
+        <li>성과: 데이터 전처리 과정 최적화로 모델 학습 속도 30% 개선</li>
+      </ul>
+    </div>
+
+    <div className="activity-item">
+      <h3>2023.07 ~ 2023.08</h3>
+      <p><strong>구로청년이룸 '코-취'(우수 수료자)</strong></p>
+      <p>
+        알고리즘 문제 해결 능력을 강화하기 위해 코딩 테스트와 스터디를 진행했습니다. 기업 과제에서는 
+        Dynamic Programming과 Greedy Algorithm을 적용하여 최적의 솔루션을 도출하였습니다.
+      </p>
+      <ul>
+        <li>주요 기술: Python, Java</li>
+        <li>성과: 기업 과제에서 알고리즘 효율성을 개선하여 평가 점수 상위 5% 달성</li>
+      </ul>
+    </div>
+
+    <div className="activity-item">
+      <h3>2023.08 ~ 2023.10</h3>
+      <p><strong>프리온보딩 백엔드 인턴십</strong></p>
+      <p>
+        대규모 트래픽 환경에서의 API 설계 및 성능 최적화를 진행했습니다. 가상 트래픽 부하 테스트를 통해 
+        병목 지점을 파악하고, 효율적인 알고리즘으로 시간 복잡도와 공간 복잡도를 개선했습니다.
+      </p>
+      <ul>
+        <li>주요 기술: Spring Boot, MySQL, Redis</li>
+        <li>성과: 트래픽 처리 속도 40% 향상, 메모리 사용량 25% 절감</li>
+      </ul>
+    </div>
+
+    <div className="activity-item">
+      <h3>2023.08 ~ 2023.10</h3>
+      <p><strong>공개SW 개발자대회</strong></p>
+      <p>
+        소상공인을 위한 '맛자취' 프로젝트를 기획 및 개발하여 공개SW 개발자대회에 출품하였습니다. 
+        사용자 맞춤형 추천 시스템과 실시간 위치 기반 서비스를 설계하고, 이를 바탕으로 상용화 가능성을 평가받았습니다.
+      </p>
+      <ul>
+        <li>주요 기술: Node.js, MongoDB, AWS</li>
+        <li>성과: 대회에서 창의성과 기술 구현력을 인정받아 우수 프로젝트 선정</li>
+      </ul>
+    </div>
+
+    <div className="activity-item">
+      <h3>2024.08 ~ 현재</h3>
+      <p><strong>BITO 스터디</strong></p>
+      <p>
+        Spring Boot와 GraphQL을 활용한 Couple 앱 사이드 프로젝트를 진행 중입니다. 테스트 커버리지 확대를 통해 
+        코드 품질을 개선하였으며, GraphQL로 REST API의 단점을 보완해 효율적인 데이터 요청을 구현했습니다.
+      </p>
+      <ul>
+        <li>주요 기술: Spring Boot, GraphQL, JUnit</li>
+        <li>성과: 테스트 코드 커버리지를 70%로 확장, 코드 리뷰를 통해 팀의 코드 스타일 통일</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
       
   

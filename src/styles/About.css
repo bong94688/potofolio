@@ -151,36 +151,29 @@
 
 
 
+.career-content h2 {
+  font-size: 2rem; /* 제목 크기 */
+  color: #2c3e50; /* 제목 색상 */
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
 .career-item {
   display: flex;
   align-items: center; /* 아이콘과 텍스트 정렬 */
   gap: 20px; /* 아이콘과 텍스트 간격 */
   margin-bottom: 20px; /* 각 경력 간 간격 */
-  background: #f9f9f9; /* 경력 항목 배경색 */
-  border-radius: 10px; /* 경력 항목 모서리 둥글게 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 경력 항목 그림자 */
-  padding: 15px; /* 경력 항목 내부 여백 */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 애니메이션 */
-}
-
-.career-item:hover {
-  transform: scale(1.02); /* 살짝 확대 */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 호버 시 그림자 강화 */
 }
 
 .career-item i {
   font-size: 40px; /* 아이콘 크기 */
   color: #4a90e2; /* 아이콘 색상 */
-  transition: color 0.3s ease; /* 아이콘 색상 전환 효과 */
-}
-
-.career-item:hover i {
-  color: #2c3e50; /* 호버 시 아이콘 색상 변경 */
 }
 
 .career-details h3 {
   font-size: 1.5rem; /* 경력 이름 크기 */
-  color: #34495e; /* 경력 이름 색상 */
+  color: #34495e;
   margin: 0;
   font-weight: 600;
 }
@@ -192,23 +185,11 @@
   font-style: italic; /* 날짜를 이탤릭 처리 */
 }
 
-.career-details ul {
-  margin: 10px 0 0 20px; /* 목록 여백 */
-  padding: 0;
-  list-style-type: disc; /* 목록 스타일 */
-}
-
-.career-details li {
-  font-size: 0.95rem;
-  color: #7f8c8d;
-  margin-bottom: 5px; /* 목록 간격 */
-}
-
+/* 반응형 디자인 */
 @media (max-width: 768px) {
   .career-item {
     flex-direction: column; /* 작은 화면에서 수직 정렬 */
     text-align: center;
-    padding: 20px; /* 모바일에서 더 넉넉한 여백 */
   }
 
   .career-item i {
@@ -222,12 +203,50 @@
   .career-details p {
     font-size: 0.9rem;
   }
+}
 
-  .career-details ul {
-    margin: 10px 0 0; /* 목록 좌우 여백 제거 */
-  }
 
-  .career-details li {
-    font-size: 0.9rem;
-  }
+/* CONTACT Section */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #4a90e2; /* 아이콘 기본 색상 */
+  transition: color 0.3s ease;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #007bff; /* 링크 호버 색상 */
+}
+
+.contact-item i:hover {
+  color: #007bff; /* 아이콘 호버 색상 */
+}
+
+/* Profile Image */
+.about-content img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

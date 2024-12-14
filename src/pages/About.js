@@ -7,27 +7,38 @@ function About() {
     <div className="about-section" id="about">
       {/* About Me Section */}
       <div className="about-content" data-aos="fade-right">
-      <img
-          src="/KakaoTalk_20241212_155741721.jpg"
-          alt="Profile"
-          tabIndex={-1} /* 포커스 비활성화 */
-          draggable="false" /* 드래그 방지 */
-          onMouseDown={(e) => e.preventDefault()} /* 클릭 시 기본 동작 방지 */
-        />
-        <div className="text">
-          
-        CONTACT
-
-Email simbonggy@gmail.com
-
-Liekdin https://www.linkedin.com/in/%EB%B4%89%EA%B5%90-%EC%8B%AC-35979829a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
-
-Github https://github.com/bong94688
-
-Velog https://velog.io/@bong9468/posts
-
-        </div>
+  <img
+    src="/KakaoTalk_20241212_155741721.jpg"
+    alt="Profile"
+    tabIndex={-1} /* 포커스 비활성화 */
+    draggable="false" /* 드래그 방지 */
+    onMouseDown={(e) => e.preventDefault()} /* 클릭 시 기본 동작 방지 */
+  />
+  <div className="text">
+    <h2>CONTACT</h2>
+    <div className="contact-list">
+      <div className="contact-item">
+        <i className="fas fa-envelope"></i>
+        <a href="mailto:simbonggy@gmail.com">simbonggy@gmail.com</a>
       </div>
+      <div className="contact-item">
+        <i className="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/%EB%B4%89%EA%B5%90-%EC%8B%AC-35979829a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer">
+          LinkedIn Profile
+        </a>
+      </div>
+      <div className="contact-item">
+        <i className="fab fa-github"></i>
+        <a href="https://github.com/bong94688" target="_blank" rel="noreferrer">GitHub Profile</a>
+      </div>
+      <div className="contact-item">
+      <i className="fas fa-blog"></i>
+      <a href="https://velog.io/@bong9468/posts" target="_blank" rel="noreferrer">Blog</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <div className="about-content" data-aos="fade-right">
   <div className="info-content">
@@ -71,48 +82,46 @@ Velog https://velog.io/@bong9468/posts
         </div>
 </div>
 <div className="about-content" data-aos="fade-right">
-  <div className="info-content career-content">
-    <h2><i class="fas fa-briefcase"></i> Career</h2>
+        <div className="info-content career-content">
+          <h2><i className="fas fa-briefcase"></i> Career</h2>
 
-    <div className="career-item">
-      <div className="career-date">
-        <p>2023.04 ~ 2023.11</p>
-      </div>
-      <div className="career-details">
-        <h3>아이쇼핑</h3>
-        <p>
-          시각장애인을 위한 맞춤형 쇼핑 솔루션 개발 프로젝트에 참여했습니다. 머신러닝 및 ChatGPT를 활용하여 사용자 경험을 개선하였으며, 백엔드와 클라우드 인프라 최적화를 담당했습니다.
-        </p>
-        <ul>
-          <li>AI 기반 맞춤형 추천 기능 개발</li>
-          <li>Spring Boot를 활용한 백엔드 구축</li>
-          <li>Redis를 활용한 캐싱 시스템 최적화</li>
-          <li>클라우드 인프라(AWS, NCP) 관리</li>
-        </ul>
-      </div>
-    </div>
+          <div className="career-item">
+            <div className="career-date">
+              <p>2023.04 ~ 2023.11</p>
+            </div>
+            <div className="career-details">
+              <h3>아이쇼핑</h3> 백엔드 팀장 (창업팀)
+              <p>
+                시각장애인을 위한 맞춤형 쇼핑 솔루션 개발 프로젝트에 참여했습니다. 머신러닝 및 ChatGPT를 활용하여 사용자 경험을 개선하였으며, 백엔드와 클라우드 인프라 최적화를 담당했습니다.
+              </p>
+              <ul>
+                <li>AI 기반 맞춤형 추천 기능 개발</li>
+                <li>Spring Boot를 활용한 백엔드 구축</li>
+                <li>Redis를 활용한 캐싱 시스템 최적화</li>
+                <li>클라우드 인프라(AWS, NCP) 관리</li>
+              </ul>
+            </div>
+          </div>
 
-    <div className="career-item">
-      <div className="career-date">
-        <p>2023.11 ~ 2024.12</p>
+          <div className="career-item">
+            <div className="career-date">
+              <p>2023.11 ~ 2024.12</p>
+            </div>
+            <div className="career-details">
+              <h3>아이페이지온</h3> EMS 팀 (백엔드 , 서버 개발)
+              <p>
+                백엔드 개발자로 활동하며 CI/CD 구축, API 설계 및 데이터 최적화 작업을 진행했습니다. 코드 품질 향상과 데이터 분석 기반의 서비스 개선에 기여하였습니다.
+              </p>
+              <ul>
+                <li>MQTT 를 이용한 서버 통신 구현</li>
+                <li>알티베이스를 이용한 DB 이중화 구현</li>
+                <li>WebSocket 를 이용한 서버 자원 그래프 구현</li>
+                <li>MSA 구조의 INT API 블럭 개발</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="career-details">
-        <h3>아이페이지온</h3>
-        <p>
-          백엔드 개발자로 활동하며 CI/CD 구축, API 설계 및 데이터 최적화 작업을 진행했습니다. 코드 품질 향상과 데이터 분석 기반의 서비스 개선에 기여하였습니다.
-        </p>
-        <ul>
-          <li>API Gateway를 활용한 효율적인 API 설계</li>
-          <li>QueryDSL 기반 동적 쿼리 최적화</li>
-          <li>데이터 분석 도구를 활용한 통계 리포트 자동화</li>
-          <li>JWT 인증 및 권한 관리 구현</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
       {/* Awards Section */}
       <div className="about-content" data-aos="fade-right">
         

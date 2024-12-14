@@ -1,0 +1,85 @@
+/* Projects.css */
+
+/* 전체 Projects 컨테이너 */
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Projects 제목 스타일 */
+  .projects h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* 프로젝트 카드 리스트 */
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+  }
+  
+  /* 개별 프로젝트 카드 */
+  .project-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* 프로젝트 카드 제목 */
+  .project-card h2 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  /* 프로젝트 카드 설명 */
+  .project-card p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  /* 기술 스택 */
+  .project-card .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .project-card .tech-stack span {
+    font-size: 0.9rem;
+    color: white;
+    background-color: #4a90e2;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+  }
+  
+  .project-card a:hover {
+    color: #0056b3;
+  }
+  

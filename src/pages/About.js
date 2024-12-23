@@ -71,9 +71,9 @@ function About() {
       효율적인 시스템 구축과 데이터 처리 최적화를 목표로 다양한 프로젝트를 진행하며 강점을 키워왔습니다.
     </p>
     <p>
-      Spring Boot와 MySQL을 기반으로 설계와 확장이 가능한 시스템 구현을 경험했습니다. 특히, 간단한 채팅 애플리케이션에서부터 
+    <strong> Spring Boot와 MySQL을 기반으로 설계 와 확장이 가능한 시스템 구현을 경험했습니다.</strong> 특히, 간단한 채팅 애플리케이션에서부터 
       대규모 서비스 부하 테스트를 최적화하며 성능 최적화와 문제 해결 능력을 개발했습니다. 또한, API 효율성을 높이고,
-      JWT를 활용한 인증 및 권한 관리를 통해 보안성과 확장성을 모두 만족시키는 작업에 기여한 경험이 있습니다.
+      <p></p><strong> JWT를 활용한 인증 및 권한 관리 를 통해 보안성과 확장성을 모두 만족시키는 작업에 기여한 경험이 있습니다.</strong>
     </p>
     <p>
       앞으로도 이러한 경험을 바탕으로 더욱 안정적이고 성능 높은 서비스를 운영 및 개발하며 성장을 지속해 나가고자 합니다.
@@ -117,6 +117,23 @@ function About() {
                 <li>알티베이스를 이용한 DB 이중화 구현</li>
                 <li>WebSocket 를 이용한 서버 자원 그래프 구현</li>
                 <li>MSA 구조의 INT API 블럭 개발</li>
+              </ul>
+            </div>
+          </div>
+          <div className="career-item">
+            <div className="career-date">
+              <p>2024.12 ~ </p>
+            </div>
+            <div className="career-details">
+              <h3>오프리메드</h3> 플랫폼 개발팀 (풀스택 개발 , 서버 개발)
+              <p>
+                임상 시험 데이터를 AI로 모델링 하여 임상 시험의 성공률를 높여주는 AIAS 를 하여 웹 프로젝트를 만들었습니다.
+              </p>
+              <ul>
+                <li>테일윈드 UI 프레임워크 를 이용한 UI 구성</li>
+                <li>React 를 이용한 웹 프론트 제작</li>
+                <li>Node.js 를 이용한 백엔드 구성</li>
+                <li>AWS 와 쿠버네티스를 이용한 서버 구성</li>
               </ul>
             </div>
           </div>
@@ -188,7 +205,7 @@ function About() {
         구현 아키텍처의 효율성을 검토받으며, 서비스 배포 시 예상 문제점에 대한 피드백을 통해 시스템을 보완하였습니다.
       </p>
       <ul>
-        <li>주요 기술: Python, TensorFlow, Flask</li>
+        <li>주요 기술: Spring, TensorFlow, Flask</li>
         <li>성과: 데이터 전처리 과정 최적화로 모델 학습 속도 30% 개선</li>
       </ul>
     </div>
@@ -201,7 +218,7 @@ function About() {
         Dynamic Programming과 Greedy Algorithm을 적용하여 최적의 솔루션을 도출하였습니다.
       </p>
       <ul>
-        <li>주요 기술: Python, Java</li>
+        <li>주요 기술: Java, Python</li>
         <li>성과: 기업 과제에서 알고리즘 효율성을 개선하여 평가 점수 상위 5% 달성</li>
       </ul>
     </div>
@@ -227,7 +244,7 @@ function About() {
         사용자 맞춤형 추천 시스템과 실시간 위치 기반 서비스를 설계하고, 이를 바탕으로 상용화 가능성을 평가받았습니다.
       </p>
       <ul>
-        <li>주요 기술: Node.js, MongoDB, AWS</li>
+        <li>주요 기술: Spring , Node.js, MongoDB, AWS</li>
         <li>성과: 대회에서 창의성과 기술 구현력을 인정받아 우수 프로젝트 선정</li>
       </ul>
     </div>

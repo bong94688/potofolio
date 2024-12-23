@@ -15,7 +15,7 @@ const projects = [
     description: '커플들을 위한 편리한 데이트 도우미 프로젝트입니다.',
     techStack: ['Spring Boot', 'graphql', 'Jpa','AWS'],
     link: 'https://github.com/bit-o-gi',
-    image: '/커플.jpg',
+    image: '/COUPLE.jpg',
   },
   {
     title: '맛자취',

@@ -80,4 +80,9 @@
     background: #0056b3; /* 호버 시 버튼 색상 어둡게 */
     transform: translateY(-2px); /* 살짝 올라가는 효과 */
   }
+  img {
+    width: 300px; /* 원하는 너비 */
+    height: 200px; /* 원하는 높이 */
+    object-fit: cover; /* 이미지의 중심을 유지하며 잘 맞춤 */
+  }
   

@@ -1,7 +1,7 @@
 .header {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 98%;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -28,6 +28,22 @@
   color: inherit;
   text-decoration: none;
   font-weight: bold;
+
+}
+.nav-links2 {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-left: 2px;
+}
+
+.nav-links2 a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links2 a:hover {
+  color: #007bff;
 }
 
 .nav-links a:hover {

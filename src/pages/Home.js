@@ -1,27 +1,91 @@
-import React from 'react';
-import '../styles/Home.css';
-import 'aos/dist/aos.css'; // Import AOS styles
-import AOS from 'aos';
-import { Link } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store';
+import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+// import { isMobile } from '../../../utils/isMobile';
+// import SocialLinkList from '../../../components/main/SocialList';
+// import ScrollArrow from '../../../components/main/ScrollArrow';
+// import InfoWrap from '../../../components/main/InfoWrap';
+import { ANI_TRANSITION, OPACITY_0, OPACITY_1 } from '../utils/constant/constant';
+// import TextWrap from '../../../components/main/TextWrap';
+import { MainComponent, Img } from './Main.styled';
+import MainBackground from '../components/background/MainBackground';
 
 function Home() {
-  React.useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  const myImg = '/KakaoTalk_20241212_155741721.jpg';
+
+  const { pathname } = useLocation();
+  // const vhRef = useRef(0);
+  // const mainRef = useRef<HTMLDivElement>(null);
+  const mainRef = useRef(null); // useRef로 mainRef 초기화
+
+  const isPosition = useSelector((state: RootState) => state.position.isPosition);
+  // const ismobile = isMobile ? 'true' : 'false';
+
+  // 모바일 환경에서 높이 딱 맞춰 나오도록
+  // useEffect(() => {
+  //   if (isMobile) {
+  //     vhRef.current = window.innerHeight * 0.01;
+  //     document.documentElement.style.setProperty('--vh', `${vhRef.current}px`);
+  //   }
+  // }, []);
+
+  // 애니메이션이 이루어 지는 동안에는 스크롤 금지, 메인 화면에서만 동작 되도록
+  useEffect(() => {
+    const mainSection = mainRef.current?.getBoundingClientRect();
+    if (mainSection?.top === 0) {
+      document.body.style.overflow = 'hidden'
+      setTimeout(() => {
+        if (pathname === '/') {
+          document.body.style.overflow = ''
+        }
+      }, 3000)
+    }
+  }, [])
+
+  const goToTarget = () => {
+    const aboutme = document.querySelector('#aboutme');
+    aboutme?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
 
   return (
-    <div className="home">
-      <div className="hero">
-        <h1 data-aos="fade-up">안녕하세요. 개발자 심봉교입니다.</h1>
-        <p data-aos="fade-up" data-aos-delay="200">
-          저를 좀더 알고싶다면 하단에 Learn More 버튼을 클릭하세요.
-        </p>
-        <Link to="/about" className="cta-button" data-aos="fade-up" data-aos-delay="400">
-          Learn More
-        </Link>
-      </div>
-    </div>
-  );
+    <motion.div className={`top-0 ${isPosition}`}>
+      {/* <MainComponent ref={mainRef} ismobile={ismobile}> */}
+      <MainComponent ref={mainRef}>
+        <MainBackground
+          initial={{ ...OPACITY_0, scale: 1.25 }}
+          animate={{ ...OPACITY_1, scale: 1 }}
+          transition={{ ...ANI_TRANSITION, delay: 3 }}
+        />
+
+        {/* 아래 내리는 이모티콘 
+        <ScrollArrow delay={3.9} /> */}
+
+          {/* 먼지알아봐야됨 */}
+        {/* <SocialLinkList delay={3} width='w-full' /> */}
+          {/* 먼지알아봐야됨 */}
+        {/* <TextWrap /> */}
+
+        <Img
+          onClick={goToTarget}
+          initial={OPACITY_0}
+          animate={OPACITY_1}
+          transition={{ ...ANI_TRANSITION, delay: 3 }}
+          src={myImg}
+          // ismobile={ismobile}
+          alt='심봉교 인물 사진'
+          loading='lazy'
+        />
+        {/* 먼지알아봐야됨. */}
+        {/* <InfoWrap delay={3} /> */}
+
+      </MainComponent>
+    </motion.div>
+  )
 }
 
 export default Home;

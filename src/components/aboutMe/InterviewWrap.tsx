@@ -45,22 +45,26 @@ const InterviewWrap = () => {
       <MyMind>
         <Tit>Interview</Tit>
         <MyMindTxt>
-          <SubTit>Q. 프론트엔드로 전향한 이유?</SubTit>
-          웹 디자이너로 활동하며 사용자 중심 디자인, 협업, 프론트엔드 기초 지식을 쌓았습니다.<br />
-          <PointText>사용자와의 소통</PointText>에 대해 중요성을 인지하고, 더 밀접하게 <PointText>상호작용 가능한 프로젝트</PointText>를 개발하고자 프론트엔드 개발자로 전향을 결심하게 되었습니다.<br />
-          React, Styled Components, Redux Toolkit 등 다양한 프레임워크와 라이브러리를 도입해 발전할 수 있는 새로운 도전에 나서고 있습니다.
+          <SubTit> Q. 어떤개발을 중시하나요?</SubTit>
+           도메인 중심 설계와 TDD 기반의 안정적인 백엔드 개발 을 중시합니다.<br /><br />
+          도메인 중심 설계(DDD)<br />
+          프로젝트에서 도메인 로직을 명확히 분리하고 계층화된 설계를 통해 유지보수성과 확장성을 극대화했습니다.<br />
+          <PointText>명확한 비즈니스 로직 구현</PointText>으로 서비스의 핵심 가치를 코드에 담아냈으며,  <PointText> 다양한 프로젝트</PointText>에서 이를 실현했습니다.<br /><br />
+
+          테스트 주도 개발(TDD)<br />
+          <PointText>TDD를 통해 기능 개발 전 테스트를 설계함</PointText>으로써 코드 품질을 보장하고, 디버깅 시간을 크게 단축했습니다.<br />
+          예외 상황을 포함한 <PointText>다양한 시나리오를 테스트</PointText>하여 예측 가능한 시스템 동작을 구현했습니다.
         </MyMindTxt>
 
         <MyMindTxt>
-          <SubTit>Q. 일에 있어 가장 중요하게 생각하는 것이 있다면?</SubTit>
-          항상 <PointText>역지사지 마인드로 사용자 중심 개발을 추구합니다.</PointText> 직관적이고 친숙한 UI 제공과 Chrome Lighthouse를 활용해 성능 최적화에 신경쓰면서,<br />
-          다양한 사용자들이 편리하게 서비스를 이용 할 수 있도록 기여하고자 합니다.
-        </MyMindTxt>
-
-        <MyMindTxt>
-          <SubTit>Q. 자기계발을 위해 어떤 것들을 해왔는지?</SubTit>
-          지속적인 학습을 위해 스터디와 온라인 강의에 적극 참여하고, <PointText>낯선 기술에도 포기 하지 않고 메타인지 방식을 활용</PointText>해 문제 해결 능력을 쌓고 있습니다.<br />
-          <BoldText>열린 마음으로 피드백을 소중히 여기고,</BoldText>개발 과정에서 항상 개선할 점을 찾기 위해 노력하고 있습니다.
+          <SubTit>Q. 더나아가서 프론트에서는 어떤 개발을 중시할까요?</SubTit>
+          프론트엔드에서의 효율성 극대화을 추구합니다.<br /><br />
+          Redux와 컴포넌트화로 코드 효율성 향상 <br />
+          Redux를 활용해 상태 관리를 체계화하고 <PointText>컴포넌트화</PointText> 를 통해 코드의 재사용성과 가독성을 크게 향상시켰습니다.<br />
+          공통 컴포넌트를 설계하여 코드 중복을 줄이고, 프로젝트 전반의 유지보수성을 강화했습니다. <br /><br />
+          React 기반 프론트엔드 성능 최적화 <br />
+          React에서 불필요한 렌더링을 방지하기 위해 <PointText>메모이제이션과 최적화 기법 </PointText> 을 적극 활용했습니다.<br />
+          Redux로 기존 useEffect 기반 로직을 정리하며, 상태 관리의 일관성을 확보하고 코드 중복을 약 30% 감소시켰습니다. <br />
         </MyMindTxt>
       </MyMind>
     </RightContainer>

@@ -7,7 +7,8 @@ export const MindData = {
 export const StackData = {
   title: 'Skill & Tools',
   stack: {
-    FrontEnd: ['html', 'css', 'javascript', 'react'],
-    Tools: ['figma', 'github', 'notion', 'discord'],
+    FrontEnd: ['javascript', 'react'],
+    BackEnd: ['spring', 'flask', 'django'],
+    Sever: ['ncp', 'AWS'],
   },
 };

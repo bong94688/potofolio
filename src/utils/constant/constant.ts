@@ -1,7 +1,7 @@
-export const ICON_URL = 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/icons/icon_';
+export const ICON_URL = 'http://localhost:3000/src/assets/icons/icon_';
 
-export const UPDATE_DATA = '24. 12. 21';
-export const EMAILL = 'crg1050@gmail.com';
+export const UPDATE_DATA = '25. 1. 089';
+export const EMAILL = 'simbonggyo@gmail.com';
 
 export const OPACITY_0 = { opacity: 0 };
 export const OPACITY_1 = { opacity: 1 };
@@ -22,7 +22,7 @@ export const socialLink = [
     id: 1,
     datatooltip: 'GitHub 가기',
     tooltiptype: 'bottom',
-    href: 'https://github.com/jieun419',
+    href: 'https://github.com/bong94688',
     arialabel: 'GitHub',
     target: '_blank',
   },
@@ -30,7 +30,7 @@ export const socialLink = [
     id: 2,
     datatooltip: '블로그 가기',
     tooltiptype: 'bottom',
-    href: 'https://velog.io/@crg1050',
+    href: 'https://velog.io/@bong9468',
     arialabel: 'Velog',
     target: '_blank',
   },

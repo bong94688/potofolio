@@ -117,7 +117,7 @@ function AboutMe() {
         <SubJectTit>About me</SubJectTit>
         <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
           <Content>
-            <LeftWrap />
+            {/* <LeftWrap /> */}
             <InterviewWrap />
             <Stacks>
               <Tit>Skill & Tools</Tit>
@@ -138,7 +138,6 @@ function AboutMe() {
               </StackWrap>
             </Stacks>
           </Content>
-
         </ScrollAni>
       </IntroComponent >
     </motion.div>

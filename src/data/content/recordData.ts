@@ -1,8 +1,8 @@
 export const recordData = [
   {
     data: '2023.02 - 2023.08',
-    title: '코드스테이츠',
-    role: '@ 프론트엔드 엔지니어 과정 부트캠프 수료',
+    title: '네이버클라우드 교육',
+    role: '@ NCP , Web 풀스택 교육',
     infos: [
       'JavaScript, React 등 학습',
       '20주 동안 매일 강도 높은 과제 수행 및 페어 프로그래밍과 코드 리뷰 경험',
@@ -13,8 +13,8 @@ export const recordData = [
   },
   {
     data: '2015.03 - 2017.02',
-    title: '전주비전대학교',
-    role: '@ 컴퓨터정보과 전문학사 졸업',
+    title: '원티드 백엔드 인턴쉽',
+    role: '@ ',
     infos: ['자료구조, 운영체제 등 CS 학습', 'HTML, CSS, JavaScript 등 프로그래밍 언어 학습'],
     stacks: ['html', 'css', 'ps', 'ai'],
   },

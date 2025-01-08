@@ -11,13 +11,6 @@ export const quickBtnsData = [
     icon: <MailSentBtn name='이메일 주소 복사' />
   },
   {
-    id: 2,
-    datatooltip: '피드백 주기',
-    tooltiptype: 'left',
-    icon: <FeedbackBtn name='피드백 주기' />
-
-  },
-  {
     id: 3,
     datatooltip: '위로가기',
     tooltiptype: 'left',

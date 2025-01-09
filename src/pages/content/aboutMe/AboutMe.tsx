@@ -10,7 +10,6 @@ import { positionActions } from '../../../store/position-slice';
 import { isMobile } from '../../../utils/isMobile';
 import ScrollAni from '../../../styles/ScrollAni';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
-import LeftWrap from '../../../components/aboutMe/LeftWrap';
 import InterviewWrap from '../../../components/aboutMe/InterviewWrap';
 
 const IntroComponent = tw.main`

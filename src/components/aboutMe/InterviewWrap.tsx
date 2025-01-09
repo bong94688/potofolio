@@ -1,6 +1,5 @@
 import tw from "tailwind-styled-components";
 import PointText from "../atoms/text/PointText";
-import BoldText from "../atoms/text/BoldText";
 
 const RightContainer = tw.div`
   flex

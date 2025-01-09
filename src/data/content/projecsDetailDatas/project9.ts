@@ -8,7 +8,7 @@ export const project9 = {
   team: '기여도 100%',
   tag: ['Colab', 'Pandas'],
   giturl: 'https://colab.research.google.com/drive/1j39NJ-HSyAeRn-QekORfpkLcW3h5cg1W?usp=sharing',
-  imgurl: 'http://localhost:3000/src/assets/images/core/coreicon.webp',
+  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/core/coreicon.webp',
   tools: [
     {
       title: 'Colab',

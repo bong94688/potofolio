@@ -8,7 +8,7 @@ export const project4 = {
   team: '기여도 50%',
   tag: ['SpringBoot','react','aws'],
   giturl: 'https://github.com/bit-o-gi/Bit-O-BE',
-  imgurl: 'http://localhost:3000/src/assets/images/couple/coupleicon.webp',
+  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/couple/coupleicon.webp',
   tools: [
     {
       title: 'SpringBoot',

@@ -8,36 +8,36 @@ export const project1 = {
   team: '기여도 50%',
   tag: ['SpringBoot', 'React','Flask','ncp','AI'],
   giturl: 'https://github.com/eye-I-shopping/eye-I-Shopping',
-  imgurl: 'http://localhost:3000/src/assets/images/eyes(I)shopping/eye(I)shoppingicon.webp',
+  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/eye(I)shoppingicon.webp',
   detailimginfo: [
     {
       imgurl:
-        'http://localhost:3000/src/assets/images/eyes(I)shopping/architecture.webp',
+        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/architecture.webp',
       subject: '시스템 아키텍처',
     },
     {
       imgurl:
-        'http://localhost:3000/src/assets/images/eyes(I)shopping/service1.webp',
+        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/service1.webp',
       subject: '설정 화면',
     },
     {
       imgurl:
-        'http://localhost:3000/src/assets/images/eyes(I)shopping/service2.webp',
+        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/service2.webp',
       subject: '상품 인식 화면',
     },
     {
       imgurl:
-        'http://localhost:3000/src/assets/images/eyes(I)shopping/accuracy.webp',
+        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/accuracy.webp',
       subject: '프로젝트 리스트 화면',
     },
     {
       imgurl:
-        'http://localhost:3000/src/assets/images/eyes(I)shopping/seach.webp',
+        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/seach.webp',
       subject: '시장 조사',
     },
     {
       imgurl:
-        'http://localhost:3000/src/assets/images/eyes(I)shopping/setting.webp',
+        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/setting.webp',
       subject: '편리한 설정 창',
     },
   ],

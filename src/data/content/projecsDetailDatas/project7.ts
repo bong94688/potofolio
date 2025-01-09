@@ -8,7 +8,7 @@ export const project7 = {
   team: '기여도 100%',
   tag: ['SpringBoot', 'React', 'NCP'],
   giturl: 'https://github.com/Gridge-Test/simbonggyo-66',
-  imgurl: 'http://localhost:3000/src/assets/images/gridgetest/gridgeicon.webp',
+  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/gridgetest/gridgeicon.webp',
   tools: [
     {
       title: 'SpringBoot',

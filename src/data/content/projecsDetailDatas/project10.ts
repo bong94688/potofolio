@@ -8,7 +8,7 @@ export const project10 = {
   team: '기여도 50%',
   tag: ['SpringBoot', 'thymeleaf'],
   giturl: 'https://github.com/Jang990/Capstone',
-  imgurl: 'http://localhost:3000/src/assets/images/capston/capstionicon.webp',
+  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/capston/capstionicon.webp',
   tools: [
     {
       "title": "Spring Boot",

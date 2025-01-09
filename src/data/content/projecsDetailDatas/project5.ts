@@ -8,7 +8,7 @@ export const project5 = {
   team: '기여도 100%',
   tag: ['Vite','React','TypeScript','Redux Toolkit','Tailwind CSS','Styled Components','AWS'],
   giturl: 'https://github.com/bong94688/potofolio',
-  imgurl: 'http://localhost:3000/src/assets/images/portpolio/portfolio.webp',
+  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/portpolio/portfolio.webp',
   tools: [
     {
       title: 'Vite',

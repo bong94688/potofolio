@@ -8,7 +8,7 @@ export const project2 = {
   team: '기여도 70%',
   tag: ['SpringBoot', 'React', 'ncp'],
   giturl: 'https://github.com/bitcampprettytiger/mukjachi',
-  imgurl: 'http://localhost:3000/src/assets/images/mukjachi/mukjachiicon.webp',
+  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/mukjachi/mukjachiicon.webp',
   tools: [
     {
       title: 'SpringBoot',

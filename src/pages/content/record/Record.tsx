@@ -11,8 +11,8 @@ export const RecordComponent = tw.article`
   grid-row-3
   gap-4
   h-screen
-  pt-[3rem]
-  mt-[3rem]
+  pt-[-1rem]
+  mt-[-1rem]
 
   max-lg:grid-cols-1
   max-xl:grid-cols-2  
@@ -25,7 +25,7 @@ function Record({ id, navTabs }: TabsPropsT) {
   const { scrollRef, scrollEl } = useScrollAnimation();
   return (
     <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'} mdH`} ref={scrollRef}>
-      <RecordComponent id={id} ref={navTabs[2].targetRef}>
+      <RecordComponent style={{ height: '150vh' }} id={id} ref={navTabs[2].targetRef}>
         {
           recordData.map((item, idx) => (
             <RecordCard

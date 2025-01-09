@@ -8,11 +8,11 @@ import { project9 } from './projecsDetailDatas/project9';
 
 export const projectData = [
   {
-    name: project9.name,
+    name: project1.name,
     type: 'team',
-    title: project9.title,
-    subject: '강아지 유치원 모바일 서비스입니다.',
-    tag: project9.tag,
+    title: project1.title,
+    subject: '아이쇼핑은 시각장애인을 위한 맞춤형 오프라인 쇼핑 지원 서비스입니다.',
+    tag: project1.tag,
   },
   {
     name: project10.name,

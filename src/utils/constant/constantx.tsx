@@ -1,6 +1,5 @@
 import GoTopBtn from "../../components/button/GotoTopBtn";
 import MailSentBtn from "../../components/button/MailSendBtn";
-import FeedbackBtn from "../../components/button/FeedbackBtn";
 import { EMAILL } from "./constant";
 
 export const quickBtnsData = [

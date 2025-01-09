@@ -33,7 +33,7 @@ export type ProjectDataT = {
 };
 
 export type RecordDataT = {
-  data: string;
+  data?: string;
   title: string;
   role: string;
   infos: string[];

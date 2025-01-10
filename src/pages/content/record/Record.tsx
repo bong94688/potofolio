@@ -4,6 +4,8 @@ import { TabsPropsT } from '../../../types/type';
 import { recordData } from '../../../data/content/recordData';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import ScrollAni from '../../../styles/ScrollAni';
+import { isMobile } from '../../../utils/isMobile';
+import { useEffect, useRef } from 'react';
 
 export const RecordComponent = tw.article`
   grid
@@ -22,24 +24,48 @@ export const RecordComponent = tw.article`
 `;
 
 function Record({ id, navTabs }: TabsPropsT) {
-  const { scrollRef, scrollEl } = useScrollAnimation();
+  const vhRef = useRef(0);
+useEffect(() => {
+    if (isMobile) {
+      vhRef.current = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vhRef.current}px`);
+    }
+  }, []);  const { scrollRef, scrollEl } = useScrollAnimation();
+
   return (
     <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'} mdH`} ref={scrollRef}>
-      <RecordComponent style={{ height: '300vh' }} id={id} ref={navTabs[2].targetRef}>
-        {
-          recordData.map((item, idx) => (
-            <RecordCard
-              key={idx}
-              data={item.data}
-              title={item.title}
-              role={item.role}
-              infos={item.infos}
-              stacks={item.stacks}
-            />
-          ))
-        }
+    {isMobile ? (
+      <RecordComponent id={id} ref={navTabs[2].targetRef}>
+        {recordData.map((item, idx) => (
+          <RecordCard
+            key={idx}
+            data={item.data}
+            title={item.title}
+            role={item.role}
+            infos={item.infos}
+            stacks={item.stacks}
+          />
+        ))}
       </RecordComponent>
-    </ScrollAni>
+    ) : (
+      <RecordComponent
+        id={id}
+        ref={navTabs[2].targetRef}
+        style={{ height: '1000px' }}
+      >
+        {recordData.map((item, idx) => (
+          <RecordCard
+            key={idx}
+            data={item.data}
+            title={item.title}
+            role={item.role}
+            infos={item.infos}
+            stacks={item.stacks}
+          />
+        ))}
+      </RecordComponent>
+    )}
+  </ScrollAni>
   );
 }
 

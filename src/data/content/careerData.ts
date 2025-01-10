@@ -12,7 +12,7 @@ export const careerData = [
       '2진법 데이터를 10진법으로 변환하여 백엔드 저장 프로세스 구현',
       '데이터 처리 속도 50% 향상, 변환 정확도 99.9% 유지',
     ],
-    stacks: ['Spring', 'ncp', 'ai'],
+    stacks: ['spring', 'ncp', 'ai'],
   },
   {
     data: '2023.11 - 2024.12',
@@ -24,6 +24,6 @@ export const careerData = [
       'Parent-Child 관계 기반의 트리 데이터를 관계형 데이터베이스에 저장하는 구조 설계',
       '3개의 테이블 설계를 통해 Parent-Child 관계를 효율적으로 관리하며, 데이터 조회 최적화',
     ],
-    stacks: ['Spring', 'thymeleaf'],
+    stacks: ['spring', 'thymeleaf'],
   },
 ];

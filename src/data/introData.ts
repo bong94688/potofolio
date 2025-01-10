@@ -9,6 +9,6 @@ export const StackData = {
   stack: {
     FrontEnd: ['javascript', 'react'],
     BackEnd: ['spring', 'flask', 'django'],
-    Sever: ['ncp', 'AWS'],
+    Sever: ['ncp', 'aws'],
   },
 };

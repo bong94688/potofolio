@@ -25,7 +25,7 @@ function Record({ id, navTabs }: TabsPropsT) {
   const { scrollRef, scrollEl } = useScrollAnimation();
   return (
     <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'} mdH`} ref={scrollRef}>
-      <RecordComponent style={{ height: '150vh' }} id={id} ref={navTabs[2].targetRef}>
+      <RecordComponent style={{ height: '300vh' }} id={id} ref={navTabs[2].targetRef}>
         {
           recordData.map((item, idx) => (
             <RecordCard

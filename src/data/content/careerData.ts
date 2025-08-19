@@ -26,4 +26,18 @@ export const careerData = [
     ],
     stacks: ['spring', 'thymeleaf'],
   },
+  {
+    data: '2025.02 - 재직중',
+    title: '(주)파츠몰',
+    role: '@ 전산팀',
+    infos: [
+      '파츠몰 ERP 및 B2B/B2C 시스템',
+      '파트존 리뉴얼 대응 신규 페이지 개발 및 유지보수',
+      'React·Spring·JSP 기반 부품 검색/장바구니/패키지 관리 기능 구현',
+      'Redis 기반 대기열 시스템 설계 및 성능 최적화',
+      '동시 접속 제어·보안 강화·클라우드 환경 최적화로 안정성 확보'
+    ]
+    ,
+    stacks: ['spring', 'thymeleaf','react'],
+  }
 ];

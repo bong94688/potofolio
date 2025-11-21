@@ -1,6 +1,6 @@
 export const careerData = [
   {
-    data: '2023.04 - 2023.11',
+    data: '2023.01 - 2023.11',
     title: '아이쇼핑',
     role: '@ 백엔드팀 - 백엔드 총괄',
     infos: [

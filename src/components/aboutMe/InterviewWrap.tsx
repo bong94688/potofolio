@@ -58,12 +58,15 @@ const InterviewWrap = () => {
         </MyMindTxt>
 
         <MyMindTxt>
-          <SubTit>Q. 더나아가서 프론트에서는 어떤 개발을 중시할까요?</SubTit>
-          프론트엔드에서의 효율성 극대화을 추구합니다.<br /><br />
-          Redux를 활용해 상태 관리를 체계화하고 <PointText>컴포넌트화</PointText> 를 통해 코드의 재사용성과 가독성을 크게 향상시켰습니다.<br />
-          공통 컴포넌트를 설계하여 코드 중복을 줄이고, 프로젝트 전반의 유지보수성을 강화했습니다. <br /><br />
-          React에서 불필요한 렌더링을 방지하기 위해 <PointText>메모이제이션과 최적화 기법 </PointText> 을 적극 활용했습니다.<br />
-          Redux로 기존 useEffect 기반 로직을 정리하며, 상태 관리의 일관성을 확보하고 코드 중복을 약 30% 감소시켰습니다. <br />
+          <SubTit>Q. 개발을 할 때 어떤 것을 중시하나요?</SubTit>
+          저는 <PointText>효율</PointText>과 <PointText>클린코드</PointText>를 가장 중요하게 생각합니다.<br /><br />
+          좋은 코드는 단순히 동작하는 코드가 아니라, 시간이 지나도 읽기 쉽고 고치기 쉬운 코드라고 믿습니다.<br />
+          그래서 반복되는 로직은 <PointText>공통 모듈과 컴포넌트로 추상화</PointText>하고, 책임을 명확히 분리해 코드 중복을 줄이는 데 집중합니다.<br />
+          이렇게 쌓인 구조는 유지보수성과 확장성으로 이어져, 새로운 요구사항이 생겨도 빠르게 대응할 수 있게 해줍니다.<br /><br />
+
+          또한 효율은 코드를 작성하는 순간뿐 아니라 <PointText>실행되는 순간</PointText>에도 중요하다고 생각합니다.<br />
+          불필요한 연산과 렌더링을 줄이기 위해 <PointText>구조를 먼저 고민</PointText>하고, 병목이 생기는 지점을 측정해 개선합니다.<br />
+          "지금 당장 돌아가는 코드"보다 <PointText>"팀이 오래 함께 다룰 수 있는 코드"</PointText>를 목표로, 항상 더 나은 구조를 고민하며 개발하고 있습니다.
         </MyMindTxt>
       </MyMind>
     </RightContainer>

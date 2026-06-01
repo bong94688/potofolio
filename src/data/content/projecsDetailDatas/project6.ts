@@ -1,3 +1,4 @@
+import { getImageUrl } from '../../../utils/assets';
 export const project6 = {
   name: 'portfolio',
   pointcolor: 'before:bg-[#373737]',
@@ -7,36 +8,36 @@ export const project6 = {
   data: '2023.08 - 진행 중',
   team: '1인 (솔로)',
   tag: ['솔로', '반응형', '포트폴리오', '사이드'],
-  imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_portfolio.webp',
+  imgurl: getImageUrl('thumbnail_portfolio.webp'),
   detailimginfo: [
     {
       imgurl:
-        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio1.webp',
+        getImageUrl('project_portfolio1.webp'),
       subject: '메인 화면',
     },
     {
       imgurl:
-        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio2.webp',
+        getImageUrl('project_portfolio2.webp'),
       subject: '나에 대한 소개 화면',
     },
     {
       imgurl:
-        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio3.webp',
+        getImageUrl('project_portfolio3.webp'),
       subject: '이력 및 학력 화면',
     },
     {
       imgurl:
-        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio4.webp',
+        getImageUrl('project_portfolio4.webp'),
       subject: '프로젝트 리스트 화면',
     },
     {
       imgurl:
-        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio5.webp',
+        getImageUrl('project_portfolio5.webp'),
       subject: '프로젝트 상세 내용 모달 창',
     },
     {
       imgurl:
-        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio6.webp',
+        getImageUrl('project_portfolio6.webp'),
       subject: '팀원 리뷰 상세 내용 모달 창',
     },
   ],

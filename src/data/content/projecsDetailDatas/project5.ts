@@ -1,3 +1,4 @@
+import { getImageUrl } from '../../../utils/assets';
 export const project5 = {
   name: '개인 포폴 프로젝트',
   pointcolor: 'before:bg-[#0b4da1]',
@@ -8,7 +9,7 @@ export const project5 = {
   team: '기여도 100%',
   tag: ['Vite','React','TypeScript','Redux Toolkit','Tailwind CSS','Styled Components','AWS'],
   giturl: 'https://github.com/bong94688/potofolio',
-  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/portpolio/portfolio.webp',
+  imgurl: getImageUrl('portpolio/portfolio.webp'),
   tools: [
     {
       title: 'Vite',

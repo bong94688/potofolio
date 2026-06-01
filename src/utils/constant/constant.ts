@@ -1,5 +1,3 @@
-export const ICON_URL = 'https://simbonggyo.duckdns.org/src/assets/icons/icon_';
-
 export const UPDATE_DATA = '25. 1. 089';
 export const EMAILL = 'simbonggyo@gmail.com';
 

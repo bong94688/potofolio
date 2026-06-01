@@ -1,5 +1,5 @@
 import tw from 'tailwind-styled-components';
-import { ICON_URL } from '../../../utils/constant/constant';
+import { getIconUrl } from '../../../utils/assets';
 
 type StackIconProps = {
   stack?: string;
@@ -7,8 +7,11 @@ type StackIconProps = {
 };
 
 export const IconBox = tw.div<StackIconProps>`
+  group
   relative
-  bg-[#0C0C0C]
+  bg-white/[0.03]
+  border
+  border-white/10
   ${(props) => props.width}
   h-0
   pb-[3.125rem]
@@ -16,6 +19,13 @@ export const IconBox = tw.div<StackIconProps>`
   items-center
   justify-center
   rounded-2xl
+  transition-all
+  duration-300
+
+  hover:-translate-y-1
+  hover:border-accent/50
+  hover:bg-white/[0.06]
+  hover:shadow-glow-sm
 `;
 
 export const Img = tw.img`
@@ -25,12 +35,16 @@ export const Img = tw.img`
   inset-2/4
   translate-y-[-50%]
   translate-x-[-50%]
+  transition-transform
+  duration-300
+
+  group-hover:scale-110
 `;
 
 function StackIcon({ stack, width }: StackIconProps) {
   return (
     <IconBox width={width}>
-      <Img src={`${ICON_URL}${stack}.svg`} alt={`${stack}`} loading='lazy' />
+      <Img src={getIconUrl(stack)} alt={`${stack}`} loading='lazy' />
     </IconBox>
   )
 }

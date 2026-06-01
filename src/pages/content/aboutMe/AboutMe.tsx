@@ -19,6 +19,7 @@ const IntroComponent = tw.main`
   flex-col
   justify-center
   bg-mainBlack
+  overflow-hidden
   px-10
   pt-10
   z-1
@@ -40,12 +41,13 @@ const SubJectTit = tw.h2`
   absolute
   top-10
   left-10
-  text-superLightGray
+  gradient-text
   font-black
   text-6xl
+  tracking-tight
 
-  max-lg:flex-col 
-  max-lg:static 
+  max-lg:flex-col
+  max-lg:static
   max-lg:w-full
 `;
 
@@ -53,12 +55,14 @@ const Tit = tw.h3`
   text-4xl
   font-black
   text-superLightGray
+  tracking-tight
   pb-[2rem]
 `;
 
 const SubTit = tw.h5`
   text-2xl
   font-bold
+  text-mainGray
   pb-6
 `;
 
@@ -113,6 +117,7 @@ function AboutMe() {
     <motion.div ref={moScrollRef}>
       <ReviewDetail />
       <IntroComponent id='aboutme'>
+        <div className='deco-glow w-[360px] h-[360px] top-[-60px] left-1/2 -translate-x-1/2 bg-accent/20' />
         <SubJectTit>About me</SubJectTit>
         <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
           <Content>

@@ -1,3 +1,4 @@
+import { getImageUrl } from '../../../utils/assets';
 export const project10 = {
   name: 'deskMood',
   pointcolor: 'before:bg-[#0b4da1]',
@@ -8,7 +9,7 @@ export const project10 = {
   team: '기여도 50%',
   tag: ['SpringBoot', 'thymeleaf'],
   giturl: 'https://github.com/Jang990/Capstone',
-  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/capston/capstionicon.webp',
+  imgurl: getImageUrl('capston/capstionicon.webp'),
   tools: [
     {
       "title": "Spring Boot",

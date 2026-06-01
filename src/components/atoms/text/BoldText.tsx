@@ -3,7 +3,8 @@ import { ChildernT } from '../../../types/type';
 
 
 export const BoldTxt = tw.strong`
-  font-bold
+  gradient-text
+  font-extrabold
   text-[106%]
 `;
 

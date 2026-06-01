@@ -1,5 +1,5 @@
 import tw from 'tailwind-styled-components';
-import { ICON_URL } from '../../utils/constant/constant';
+import { getIconUrl } from '../../utils/assets';
 
 const HoverModalBox = tw.div`
   hidden
@@ -119,7 +119,7 @@ function HoverModal({ blog }: BlogProps) {
               title='바로가기(새창)'
               target='_blank'
             >
-              <img src={`${ICON_URL}blog.svg`} alt='' />
+              <img src={getIconUrl('blog')} alt='' />
               {item.title}
               <Arrow />
             </GotoLink>

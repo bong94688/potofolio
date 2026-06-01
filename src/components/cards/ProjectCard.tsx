@@ -14,16 +14,20 @@ export const CardContainer = tw.section`
   flex-col
   justify-start
   gap-8
-  rounded
-  bg-lightGray
+  rounded-2xl
+  bg-surface2
+  border
+  border-white/10
   relative
   h-[25rem]
   group
+  grad-border
   transition-all
-  
-  hover:shadow-black
-  hover:shadow-2xl
-  hover:translate-y-[-5px]
+  duration-300
+
+  hover:shadow-glow
+  hover:border-white/20
+  hover:translate-y-[-6px]
 `;
 
 export const CardThumbnail = tw.div`
@@ -45,12 +49,14 @@ export const TxtWrap = tw.div<ProjectDataProps>`
 export const Tit = tw.h4`
   font-bold
   text-2xl
+  tracking-tight
   group-hover:text-center
 `;
 
 export const Txt = tw.p`
   text-base
-  text-[#A6A6A6]
+  text-muted
+  leading-relaxed
 `;
 
 export const Tags = tw.div`
@@ -58,7 +64,8 @@ export const Tags = tw.div`
   bottom-0
   p-5
   flex
-  gap-1
+  flex-wrap
+  gap-1.5
 `;
 
 export const HoverBox = tw.div`
@@ -73,9 +80,11 @@ export const HoverBox = tw.div`
   w-full
   h-full
   p-5
-  bg-[#323232]
+  bg-base/85
+  backdrop-blur-md
   opacity-0
-  transition
+  transition-opacity
+  duration-300
 
   group-hover:opacity-100
 `;
@@ -89,15 +98,17 @@ export const BtnBox = tw.div`
 
 export const Button = tw.button`
   p-3
-  border-[1px]
-  border-solid
-  border-white
+  border
+  border-white/40
   text-white
-  rounded
-  transition
-  
-  hover:bg-white
-  hover:text-mainBlack
+  rounded-xl
+  font-medium
+  transition-all
+  duration-300
+
+  hover:bg-grad
+  hover:border-transparent
+  hover:shadow-glow-sm
 `;
 
 function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: ProjectDataT) {

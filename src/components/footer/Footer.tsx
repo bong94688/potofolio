@@ -4,18 +4,22 @@ const FooterContainer = tw.footer`
   relative
   z-1
   px-10
-  py-10
+  py-8
   flex
   flex-col
   gap-2
   items-center
   justify-center
+  border-t
+  border-white/10
 `;
 
 const FooterTxt = tw.p`
-  text-[#A6A6A6]
-  text-sm
+  text-muted
+  text-xs
   text-center
+  leading-relaxed
+  tracking-wide
 `;
 
 function Footer() {

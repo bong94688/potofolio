@@ -6,12 +6,21 @@ export const CardContainer = tw.section`
   overflow-hidden
   flex
   flex-col
-  rounded
+  rounded-2xl
   h-[30rem]
-  bg-lightGray
-  relative  
+  bg-surface2
+  border
+  border-white/10
+  relative
   justify-between
   group
+  grad-border
+  transition-all
+  duration-300
+
+  hover:border-white/20
+  hover:shadow-card
+  hover:-translate-y-1
 `;
 
 export const TxtWrap = tw.div`
@@ -25,6 +34,7 @@ export const TxtWrap = tw.div`
 export const Tit = tw.h4`
   font-bold
   text-2xl
+  tracking-tight
   flex
   flex-col
   gap-1
@@ -32,11 +42,17 @@ export const Tit = tw.h4`
 
 export const Role = tw.span`
   text-sm
+  text-accent2
+  font-medium
 `;
 
 export const RecordUl = tw.ul`
+  flex
+  flex-col
+  gap-1
   text-base
-  text-[#A6A6A6]
+  text-muted
+  leading-relaxed
 `;
 
 export const RecordList = tw.li`
@@ -56,12 +72,23 @@ export const RecordList = tw.li`
 export const Tags = tw.div`
   p-5
   flex
-  gap-1
+  flex-wrap
+  gap-2
 `;
 
 export const Date = tw.span`
-  text-[#A6A6A6]
-  text-sm
+  inline-flex
+  w-fit
+  text-accent2
+  text-xs
+  font-medium
+  tracking-wide
+  bg-accent2/10
+  border
+  border-accent2/20
+  rounded-full
+  px-3
+  py-1
 `;
 
 function RecordCard({ data, title, role, infos, stacks }: RecordDataT) {

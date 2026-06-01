@@ -5,15 +5,25 @@ type TagT = {
 };
 
 export const TagTxt = tw.span`
-  felx
+  inline-flex
   items-center
   justify-center
+  whitespace-nowrap
   text-xs
-  text-white
-  bg-[#232323]
+  font-medium
+  text-mainGray
+  bg-white/5
+  border
+  border-white/10
   px-3
   py-1
-  rounded
+  rounded-full
+  backdrop-blur-sm
+  transition-colors
+  duration-300
+
+  hover:border-accent/50
+  hover:text-white
 `;
 
 function TagText({ tag }: TagT) {

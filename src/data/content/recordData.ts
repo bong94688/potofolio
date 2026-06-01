@@ -33,7 +33,7 @@ export const recordData = [
   },
   {
     "data": "2018.02 - 2023.02",
-    "title": "인하공전 컴퓨터시스템과",
+    "title": "컴퓨터시스템과",
     "role": "@ 컴퓨터 시스템 및 소프트웨어 개발 전공",
     "infos": [
       "C, C++, Java, Python 등 프로그래밍 언어 학습",

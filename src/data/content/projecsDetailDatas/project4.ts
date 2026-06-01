@@ -1,3 +1,4 @@
+import { getImageUrl } from '../../../utils/assets';
 export const project4 = {
   name: 'BitO 프로젝트',
   pointcolor: 'before:bg-[#0b4da1]',
@@ -8,7 +9,7 @@ export const project4 = {
   team: '기여도 50%',
   tag: ['SpringBoot','react','aws'],
   giturl: 'https://github.com/bit-o-gi/Bit-O-BE',
-  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/couple/coupleicon.webp',
+  imgurl: getImageUrl('couple/coupleicon.webp'),
   tools: [
     {
       title: 'SpringBoot',

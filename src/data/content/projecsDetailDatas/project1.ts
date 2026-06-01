@@ -1,3 +1,4 @@
+import { getImageUrl } from '../../../utils/assets';
 export const project1 = {
   name: 'goguma',
   pointcolor: 'before:bg-[#7c29a7]',
@@ -8,36 +9,36 @@ export const project1 = {
   team: '기여도 50%',
   tag: ['SpringBoot', 'React','Flask','ncp','AI'],
   giturl: 'https://github.com/eye-I-shopping/eye-I-Shopping',
-  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/eye(I)shoppingicon.webp',
+  imgurl: getImageUrl('eyes(I)shopping/eye(I)shoppingicon.webp'),
   detailimginfo: [
     {
       imgurl:
-        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/architecture.webp',
+        getImageUrl('eyes(I)shopping/architecture.webp'),
       subject: '시스템 아키텍처',
     },
     {
       imgurl:
-        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/service1.webp',
+        getImageUrl('eyes(I)shopping/service1.webp'),
       subject: '설정 화면',
     },
     {
       imgurl:
-        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/service2.webp',
+        getImageUrl('eyes(I)shopping/service2.webp'),
       subject: '상품 인식 화면',
     },
     {
       imgurl:
-        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/accuracy.webp',
+        getImageUrl('eyes(I)shopping/accuracy.webp'),
       subject: '프로젝트 리스트 화면',
     },
     {
       imgurl:
-        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/seach.webp',
+        getImageUrl('eyes(I)shopping/seach.webp'),
       subject: '시장 조사',
     },
     {
       imgurl:
-        'https://simbonggyo.duckdns.org/src/assets/images/eyes(I)shopping/setting.webp',
+        getImageUrl('eyes(I)shopping/setting.webp'),
       subject: '편리한 설정 창',
     },
   ],

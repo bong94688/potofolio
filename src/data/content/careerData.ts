@@ -27,7 +27,7 @@ export const careerData = [
     stacks: ['spring', 'thymeleaf'],
   },
   {
-    data: '2025.02 - 재직중',
+    data: '2025.02 - 2026.03',
     title: '(주)파츠몰',
     role: '@ 전산팀',
     infos: [
@@ -39,5 +39,17 @@ export const careerData = [
     ]
     ,
     stacks: ['spring', 'thymeleaf','react'],
+  },
+  {
+    data: '2026.03 - 재직중',
+    title: '(주)이엘온소프트',
+    role: '@ 금융기술지원팀',
+    infos: [
+      'WL(Watch List) 개발 및 AML(자금세탁방지) 시스템 유지보수 및 기능 개발',
+      '책무구조도 관련 기능 유지보수 및 신규 개발',
+      '대용량 WL 스크리닝 배치 튜닝 및 쿼리·인덱스 최적화로 처리 속도 약 40% 향상',
+      '예외 처리·데이터 정합성 보강과 로깅 강화로 운영 안정성 확보',
+    ],
+    stacks: ['java', 'spring'],
   }
 ];

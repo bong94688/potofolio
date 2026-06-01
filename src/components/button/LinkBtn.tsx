@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 import HoverModal from '../modal/HoverModal';
-import { ICON_URL } from '../../utils/constant/constant';
+import { getIconUrl } from '../../utils/assets';
 
 type BlogT = {
   title?: string;
@@ -80,7 +80,7 @@ function LinkBtn({ name, text, giturl, depoloyurl, blog }: LinkProps) {
           blog ? (
             <HoverButton aria-label={text}>
               <IconCircle>
-                <Img src={`${ICON_URL}${name}.svg`} alt={name} />
+                <Img src={getIconUrl(name)} alt={name} />
               </IconCircle>
               <Text>{text}</Text>
               {blog && <HoverModal blog={blog} />}
@@ -88,7 +88,7 @@ function LinkBtn({ name, text, giturl, depoloyurl, blog }: LinkProps) {
           ) : (
             <LinkButton href={giturl ? giturl : depoloyurl} aria-label={text} title='바로가기(새창)'>
               <IconCircle>
-                <Img src={`${ICON_URL}${name}.svg`} alt={name} />
+                <Img src={getIconUrl(name)} alt={name} />
               </IconCircle>
               <Text>{text}</Text>
             </LinkButton>

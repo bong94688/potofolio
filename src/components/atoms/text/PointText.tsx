@@ -5,15 +5,11 @@ import { ChildernT } from '../../../types/type';
 export const PointTxt = tw.div`
   relative inline-block
   z-1
-  m-0.5
-  py-0.5
-  px-1
-  bg-mainBlack
-  rounded-md
 `;
 
 export const Txt = tw.span`
   relative inline-block
+  gradient-text
   font-bold
   text-[106%]
   z-1

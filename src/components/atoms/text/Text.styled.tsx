@@ -5,7 +5,7 @@ export const MainTitle = tw(motion.h2)`
   text-5xl
   font-black
   text-black
-  font-normal
+  tracking-tight
   mb-6
   relative
   z-10

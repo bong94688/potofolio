@@ -23,6 +23,7 @@ export const IntroAnimationDiv = tw(motion.div)`
 `;
 
 export const StTxt = tw.strong`
+  gradient-text
   font-black
 `;
 

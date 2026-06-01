@@ -1,3 +1,4 @@
+import { getImageUrl } from '../../../utils/assets';
 export const project2 = {
   name: '맛자취',
   pointcolor: 'before:bg-[#0b4da1]',
@@ -8,7 +9,7 @@ export const project2 = {
   team: '기여도 70%',
   tag: ['SpringBoot', 'React', 'ncp'],
   giturl: 'https://github.com/bitcampprettytiger/mukjachi',
-  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/mukjachi/mukjachiicon.webp',
+  imgurl: getImageUrl('mukjachi/mukjachiicon.webp'),
   tools: [
     {
       title: 'SpringBoot',

@@ -1,3 +1,4 @@
+import { getImageUrl } from '../../../utils/assets';
 export const project7 = {
   name: '그릿 테스트 프로젝트',
   pointcolor: 'before:bg-[#0b4da1]',
@@ -8,7 +9,7 @@ export const project7 = {
   team: '기여도 100%',
   tag: ['SpringBoot', 'React', 'NCP'],
   giturl: 'https://github.com/Gridge-Test/simbonggyo-66',
-  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/gridgetest/gridgeicon.webp',
+  imgurl: getImageUrl('gridgetest/gridgeicon.webp'),
   tools: [
     {
       title: 'SpringBoot',

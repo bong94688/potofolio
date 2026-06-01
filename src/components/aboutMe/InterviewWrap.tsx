@@ -12,12 +12,14 @@ const Tit = tw.h3`
   text-4xl
   font-black
   text-superLightGray
+  tracking-tight
   pb-[2rem]
 `;
 
 const SubTit = tw.h5`
   text-2xl
   font-bold
+  text-mainGray
   pb-6
 `;
 
@@ -30,11 +32,13 @@ const MyMind = tw.div`
 const MyMindTxt = tw.div`
   relative
   text-base
+  text-mainGray/80
+  leading-relaxed
   mb-5
-  bg-lightGray
-  p-5
+  glass
+  p-6
   rounded-tl-2xl
-  rounded-tr-2xl  
+  rounded-tr-2xl
   rounded-bl-2xl
 `;
 

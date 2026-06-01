@@ -27,16 +27,16 @@ const Container = tw.article`
   pt-20
 `
 
-const TabMenuList = tw.div`  
+const TabMenuList = tw.div`
   w-fit
   flex
   gap-2
   items-center
   justify-center
   rounded-full
-  px-4
-  py-3
-  bg-lightGray
+  px-2
+  py-2
+  glass
 
   max-sm:w-full
 `

@@ -39,8 +39,11 @@ export const CToolTip = tw.div<StylePropsT>`
   after:bottom-0
   after:w-full
   after:h-full
-  after:bg-[#232323]
-  after:opacity-80
+  after:bg-surface3
+  after:border
+  after:border-white/10
+  after:rounded
+  after:opacity-95
   after:z-[-1]
 
   group-hover/tooltip:visible

@@ -4,13 +4,16 @@ import { RootState } from "../../store";
 import { filteringAcitions } from "../../store/filtering-slice";
 
 const TabButton = tw.button`
-  text-white
+  text-muted
+  font-medium
   rounded-full
   px-5
   py-2
   bg-transparent
-  transition
-  hover:bg-[#4e4e4e]
+  transition-all
+  duration-300
+  hover:bg-white/10
+  hover:text-white
 
   max-sm:w-full
   max-sm:text-xs
@@ -31,7 +34,7 @@ const TabBtn = ({ children, type }: { children: React.ReactNode, type: string })
 
   return (
     <TabButton
-      className={keyword === type ? 'bg-superLightGray text-mainColorBlack font-bold hover:bg-superLightGray hover:text-mainColorBlack' : ''}
+      className={keyword === type ? 'bg-grad text-white font-semibold shadow-glow-sm hover:bg-grad hover:text-white' : ''}
       name={type}
       onClick={() => handlerFiltering(type)}
     >

@@ -1,3 +1,4 @@
+import { getImageUrl } from '../../../utils/assets';
 export const project8 = {
   name: 'core',
   pointcolor: 'before:bg-[#0b4da1]',
@@ -8,7 +9,7 @@ export const project8 = {
   team: '기여도 100%',
   tag: ['typescript','react','aws'],
   giturl: 'https://github.com/bong94688/potofolio',
-  imgurl: 'https://simbonggyo.duckdns.org/src/assets/images/portpolio/portfolio.webp',
+  imgurl: getImageUrl('portpolio/portfolio.webp'),
   tools: [
     {
       title: 'Naver Cloud Platform',

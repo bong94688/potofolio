@@ -23,11 +23,13 @@ export const NavContainer = tw.nav`
 `;
 
 export const NavLink = tw.button`
-  text-lightGray
+  text-[#34343f]
   font-black
   text-6xl
   text-left
-  transition
+  tracking-tight
+  transition-all
+  duration-300
 
   max-md:text-2xl
   max-lg:text-5xl
@@ -40,7 +42,7 @@ function Nav({ navTabs }: TabsPropsT) {
         <NavLink
           key={idx}
           onClick={tab.scrollToTarget}
-          className={tab.isTarget ? 'text-mainGray' : 'text-lightGray hover:text-[#4a4a4a]'}
+          className={tab.isTarget ? 'gradient-text' : 'text-[#34343f] hover:text-[#5a5a6a]'}
         >
           {tab.targetName}
         </NavLink>

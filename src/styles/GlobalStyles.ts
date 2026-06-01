@@ -18,8 +18,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background-color: #232323;
-        font-family: 'Noto Sans KR', sans-serif;
+        background-color: #08090f;
+        font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
 
         line-height: 1.5;
         font-weight: 400;
@@ -41,12 +41,11 @@ const GlobalStyles = createGlobalStyle`
         color: inherit;
     }
    
-    html, body, div, span, h1, h2, h3, h4, h5, h6, p, 
+    html, body, div, span, h1, h2, h3, h4, h5, h6, p,
     a, dl, dt, dd, ol, ul, li, form, label, table {
         margin: 0;
         padding: 0;
         border: 0;
-        font-size: 1rem;
         vertical-align: baseline;
         word-break: keep-all;
     }

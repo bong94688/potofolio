@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MindData, StackData } from '../../data/introData';
+import { MindData, StackData, interviewData, splitEmphasis } from '../../data/introData';
 import { projectData } from '../../data/content/projectData';
 import { careerData } from '../../data/content/careerData';
 import { recordData } from '../../data/content/recordData';
@@ -39,16 +39,16 @@ export function Readme({ onOpen }: { onOpen: (id: string) => void }) {
       </h1>
       <p className="mt-2 font-mono text-lg md:text-xl text-ide-text">
         <span className="text-syn-key">const</span> <span className="text-syn-fn">role</span>{' '}
-        <span className="text-ide-dim">=</span> <span className="text-syn-str">'Backend Developer'</span>
+        <span className="text-ide-dim">=</span> <span className="text-syn-str">'AI-Driven Backend Developer'</span>
         <span className="text-ide-dim">;</span>
       </p>
 
       <p className="mt-8 font-mono text-sm md:text-[15px] leading-7 text-ide-dim max-w-2xl">
         <span className="text-syn-cmt">/**</span>
         <br />
-        <span className="text-syn-cmt"> * 함께하는 개발 마인드, 협업을 중시하며</span>
+        <span className="text-syn-cmt"> * AI를 파이프라인으로 설계해 rule.md · 검수 AI · 테스트 · 보고서로</span>
         <br />
-        <span className="text-syn-cmt"> * 생동감 있게 일하는 개발자입니다.</span>
+        <span className="text-syn-cmt"> * 검증된 결과를 빠르게 만들어내는 개발자입니다.</span>
         <br />
         <span className="text-syn-cmt"> */</span>
       </p>
@@ -59,7 +59,7 @@ export function Readme({ onOpen }: { onOpen: (id: string) => void }) {
           { k: 'experience', v: '3y+' },
           { k: 'projects', v: String(projectData.length) },
           { k: 'companies', v: String(careerData.length) },
-          { k: 'stack', v: 'BE·FE' },
+          { k: 'stack', v: 'AI·BE·FE' },
         ].map((s) => (
           <div key={s.k} className="rounded-lg border border-ide-line bg-ide-bar/60 px-4 py-3">
             <div className="text-2xl font-bold gradient-text">{s.v}</div>
@@ -95,25 +95,6 @@ export function Readme({ onOpen }: { onOpen: (id: string) => void }) {
 }
 
 /* ───────── about.md ───────── */
-const interview = [
-  {
-    q: 'Q. 어떤 개발을 중시하나요?',
-    a: [
-      '도메인 중심 설계와 TDD 기반의 안정적인 백엔드 개발을 중시합니다.',
-      '도메인 로직을 명확히 분리하고 계층화된 설계를 통해 유지보수성과 확장성을 극대화했습니다.',
-      'TDD로 기능 개발 전 테스트를 설계해 코드 품질을 보장하고 디버깅 시간을 크게 단축했습니다.',
-    ],
-  },
-  {
-    q: 'Q. 프론트엔드에서는 무엇을 중시하나요?',
-    a: [
-      '프론트엔드에서는 효율성 극대화를 추구합니다.',
-      'Redux로 상태 관리를 체계화하고 컴포넌트화로 재사용성과 가독성을 향상시켰습니다.',
-      '메모이제이션과 최적화 기법을 적극 활용해 불필요한 렌더링을 방지하고 코드 중복을 약 30% 감소시켰습니다.',
-    ],
-  },
-];
-
 export function About() {
   return (
     <div className="px-5 py-7 md:px-8 md:py-9">
@@ -125,13 +106,13 @@ export function About() {
             <Key>## </Key>
             <span className="font-bold text-ide-text">Mind</span>
           </span>,
-          <span className="text-ide-dim">{MindData.text.split('\n')[0]}</span>,
+          ...MindData.text.split('\n').map((t) => <span className="text-ide-dim">{t}</span>),
           <span> </span>,
         ]}
       />
 
       <div className="mt-6 space-y-5">
-        {interview.map((it, i) => (
+        {interviewData.map((it, i) => (
           <div key={i} className="rounded-xl border border-ide-line bg-ide-bar/50 overflow-hidden">
             <div className="flex items-center gap-2 px-4 py-2.5 border-b border-ide-line bg-ide-active/50">
               <span className="text-syn-tag font-mono text-xs">{`</>`}</span>
@@ -141,7 +122,11 @@ export function About() {
               {it.a.map((line, j) => (
                 <li key={j} className="flex gap-2 text-ide-dim">
                   <span className="text-syn-str shrink-0">{'>'}</span>
-                  <span>{line}</span>
+                  <span>
+                    {splitEmphasis(line).map((part, k) =>
+                      k % 2 ? <span key={k} className="text-syn-str">{part}</span> : part
+                    )}
+                  </span>
                 </li>
               ))}
             </ul>

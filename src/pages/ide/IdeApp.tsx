@@ -35,9 +35,9 @@ function FileIcon({ ext }: { ext: string }) {
 /* 하단 통합 터미널 — 타이핑 효과 */
 function TerminalBar() {
   const seq = [
-    { cmd: 'whoami', out: '심봉교 — Backend Developer' },
-    { cmd: 'cat motto.txt', out: '함께하는 개발, 생동감 있게.' },
-    { cmd: 'echo $STATUS', out: '새로운 도전을 환영합니다 :)' },
+    { cmd: 'whoami', out: '심봉교 — AI-Driven Backend Developer' },
+    { cmd: 'cat rule.md', out: '규칙은 문서로, 검수는 AI로, 판단은 사람이.' },
+    { cmd: 'ai pipeline --status', out: '구현 → 검수보고서 → 테스트 → 완료보고서 ✓' },
   ];
   const [i, setI] = useState(0);
   const [typed, setTyped] = useState('');

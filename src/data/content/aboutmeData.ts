@@ -1,14 +1,14 @@
 export const aboutMetags = [
   {
-    name: '#역지사지',
+    name: '#AI_파이프라인',
   },
   {
-    name: '#메타인지',
+    name: '#검수_AI',
   },
   {
-    name: '#피드백_수용',
+    name: '#rule.md',
   },
   {
-    name: '#끊임없는_배움',
+    name: '#검증된_코드',
   },
 ];

@@ -59,14 +59,14 @@ function TextWrap() {
         animate={{ ...OPACITY_1, ...Y_P10 }}
         transition={{ ...ANI_TRANSITION, delay: 3 }}
       >
-        함께하는  <BoldTxt>개발</BoldTxt> 마인드,
+        <BoldTxt>AI</BoldTxt>를 파이프라인으로 설계하고,
       </MainSubText>
       <MainSubText
         initial={{ ...OPACITY_0, ...Y_0 }}
         animate={{ ...OPACITY_1, ...Y_P10 }}
         transition={{ ...ANI_TRANSITION, delay: 3.5 }}
       >
-        협업을 중시하는 <BoldTxt>생동감</BoldTxt>있게 일하는 개발자입니다.
+        <BoldTxt>검증된 결과</BoldTxt>로 빠르게 만들어내는 개발자입니다.
       </MainSubText>
     </TxtBox >
   )

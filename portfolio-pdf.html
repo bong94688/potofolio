@@ -1,0 +1,197 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>심봉교 | Full-Stack Developer Portfolio</title>
+  <style>
+    :root { --ink:#eaf1ff; --muted:#9aabc7; --blue:#55a7ff; --cyan:#55e4d4; --navy:#07111f; --panel:#101d31; --line:#243a57; }
+    * { box-sizing:border-box; }
+    @page { size:A4; margin:0; }
+    body { margin:0; background:#151b25; color:var(--ink); font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .page { width:210mm; height:297mm; padding:17mm 17mm 14mm; margin:0 auto 8mm; position:relative; overflow:hidden; background:var(--navy); page-break-after:always; }
+    .page:last-child { page-break-after:auto; }
+    .page::before { content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(85,167,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(85,167,255,.035) 1px,transparent 1px); background-size:22px 22px; pointer-events:none; }
+    .page > * { position:relative; z-index:1; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { font-size:31pt; line-height:1.12; letter-spacing:-1.8px; margin:0 0 6mm; }
+    h2 { font-size:18pt; margin:0; letter-spacing:-.5px; }
+    h3 { font-size:11.5pt; margin:0 0 2mm; }
+    p,li { font-size:8.5pt; line-height:1.62; color:#c8d4e8; }
+    a { color:inherit; text-decoration:none; }
+    .mono { font-family:Consolas,monospace; }
+    .eyebrow { color:var(--cyan); font:600 8pt Consolas,monospace; letter-spacing:1.5px; text-transform:uppercase; }
+    .accent { color:var(--blue); }
+    .muted { color:var(--muted); }
+    .topline { display:flex; justify-content:space-between; align-items:center; padding-bottom:4mm; margin-bottom:7mm; border-bottom:1px solid var(--line); }
+    .page-no { color:#6f819e; font:7.5pt Consolas,monospace; }
+    .footer { position:absolute; left:17mm; right:17mm; bottom:7mm; display:flex; justify-content:space-between; color:#607591; font:6.8pt Consolas,monospace; }
+    .hero { display:flex; height:245mm; flex-direction:column; justify-content:center; }
+    .hero::after { content:"</>"; position:absolute; right:-2mm; top:46mm; font:700 98pt Consolas; color:rgba(85,167,255,.07); }
+    .hero .role { font:500 11pt Consolas; color:var(--cyan); margin-bottom:5mm; }
+    .hero p { width:135mm; font-size:12pt; line-height:1.72; color:#c9d5e8; }
+    .hero .chips { display:flex; gap:2mm; flex-wrap:wrap; margin:8mm 0 18mm; }
+    .chip { border:1px solid #315277; color:#cde1ff; background:rgba(32,74,118,.28); padding:2mm 3.3mm; border-radius:99px; font:500 7.5pt Consolas; }
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; width:150mm; gap:3mm 10mm; }
+    .contact { border-top:1px solid var(--line); padding-top:2.5mm; }
+    .contact span { display:block; color:#6f819e; font:6.8pt Consolas; margin-bottom:1mm; }
+    .contact strong { font-size:8.4pt; font-weight:500; }
+    .section-title { display:flex; align-items:end; justify-content:space-between; margin-bottom:6mm; }
+    .section-title p { margin:0; width:83mm; font-size:8pt; text-align:right; }
+    .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+    .card { background:linear-gradient(145deg,rgba(19,37,62,.94),rgba(10,24,42,.94)); border:1px solid var(--line); border-radius:3mm; padding:5mm; }
+    .card .num { color:var(--cyan); font:600 17pt Consolas; }
+    .card .label { color:#7f94b2; font:7pt Consolas; text-transform:uppercase; }
+    .card ul { padding-left:4.5mm; margin:2mm 0 0; }
+    .card li { margin-bottom:1.2mm; }
+    .principle { display:grid; grid-template-columns:12mm 1fr; gap:3mm; padding:4mm 0; border-top:1px solid var(--line); }
+    .principle b { color:var(--blue); font:600 10pt Consolas; }
+    .principle p { margin:0; }
+    .stack-row { display:grid; grid-template-columns:28mm 1fr; padding:3mm 0; border-top:1px solid var(--line); }
+    .stack-row strong { color:var(--cyan); font:600 7.8pt Consolas; }
+    .stack-row span { font-size:8pt; color:#becbe0; }
+    .timeline { position:relative; padding-left:6mm; border-left:1px solid #2c4a70; }
+    .job { position:relative; margin-bottom:6mm; padding:4.5mm 5mm; background:rgba(15,31,53,.88); border:1px solid var(--line); border-radius:2.5mm; }
+    .job::before { content:""; position:absolute; left:-7.6mm; top:7mm; width:3mm; height:3mm; border-radius:50%; background:var(--cyan); box-shadow:0 0 0 2mm #07111f; }
+    .job-head { display:flex; justify-content:space-between; gap:5mm; margin-bottom:2mm; }
+    .job-head small { color:var(--blue); font:500 7.4pt Consolas; white-space:nowrap; }
+    .job .roleline { color:#8da2bf; font-size:7.5pt; margin-bottom:2.5mm; }
+    .job ul { margin:0; padding-left:4mm; }
+    .job li { font-size:7.7pt; line-height:1.52; margin-bottom:1mm; }
+    .metric-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:2mm; margin-bottom:5mm; }
+    .metric { padding:3.5mm 2mm; text-align:center; background:#0e2037; border:1px solid var(--line); border-radius:2mm; }
+    .metric b { display:block; color:var(--cyan); font:600 13pt Consolas; }
+    .metric span { color:#7f94b2; font-size:6.8pt; }
+    .project-hero { display:grid; grid-template-columns:1.1fr .9fr; gap:6mm; align-items:center; margin-bottom:6mm; }
+    .project-hero img { width:100%; height:73mm; object-fit:cover; border-radius:3mm; border:1px solid var(--line); background:#fff; }
+    .project-hero .logo { object-fit:contain; padding:8mm; background:#fff; }
+    .project-kicker { color:var(--cyan); font:500 7.5pt Consolas; margin-bottom:2mm; }
+    .project-hero h2 { font-size:22pt; margin-bottom:3mm; }
+    .tags { display:flex; flex-wrap:wrap; gap:1.5mm; margin:3mm 0; }
+    .tags span { color:#9fc8f8; background:#132c49; padding:1.2mm 2.2mm; border-radius:1mm; font:6.7pt Consolas; }
+    .detail-grid { display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+    .detail { border-top:2px solid #2e76b9; padding-top:3mm; }
+    .detail h3 { color:#e9f3ff; }
+    .detail p,.detail li { font-size:7.7pt; }
+    .detail ul { padding-left:4mm; margin:0; }
+    .shot-grid { display:grid; grid-template-columns:1fr 1fr; gap:4mm; margin-top:5mm; }
+    .shot { background:#fff; border:1px solid var(--line); border-radius:2.5mm; overflow:hidden; }
+    .shot img { display:block; width:100%; height:67mm; object-fit:contain; }
+    .shot figcaption { background:#0f2036; color:#8da5c4; font-size:6.8pt; padding:2mm 3mm; }
+    .compact-projects { display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+    .compact { min-height:83mm; }
+    .compact .icon { width:18mm; height:18mm; object-fit:contain; background:#fff; border-radius:3mm; padding:2mm; margin-bottom:3mm; }
+    .compact h3 { font-size:13pt; }
+    .compact p,.compact li { font-size:7.6pt; }
+    .compact ul { padding-left:4mm; }
+    .awards { display:grid; grid-template-columns:1fr 1fr; gap:3mm; margin-top:5mm; }
+    .award { padding:4mm; border:1px solid var(--line); border-radius:2mm; background:#0e1c30; }
+    .award strong { display:block; font-size:8.5pt; margin-bottom:1mm; }
+    .award span { color:var(--cyan); font:6.8pt Consolas; }
+    .closing { height:230mm; display:flex; flex-direction:column; justify-content:center; }
+    .closing h2 { font-size:28pt; width:145mm; line-height:1.3; }
+    .closing p { font-size:10.5pt; width:145mm; margin:7mm 0 12mm; }
+    .codebox { width:155mm; padding:6mm; border:1px solid #315277; border-radius:3mm; background:#091624; font:8pt/1.8 Consolas; color:#9db1ce; }
+    .codebox .key { color:#67b7ff; } .codebox .str { color:#67dfca; }
+    @media print { body { background:none; } .page { margin:0; } }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div class="hero">
+      <div class="eyebrow">PORTFOLIO / 2026</div>
+      <div class="role">Full-Stack Developer</div>
+      <h1>심봉교<span class="accent">.</span></h1>
+      <p>비즈니스 가치를 구현하는 도메인 설계와 안정적인 시스템을 만듭니다. 백엔드 아키텍처부터 React 기반 화면까지 연결하고, AI를 개발 파이프라인으로 설계해 검증된 결과를 반복해서 만들어냅니다.</p>
+      <div class="chips"><span class="chip">Java / Spring</span><span class="chip">React / TypeScript</span><span class="chip">Redis</span><span class="chip">MSA</span><span class="chip">AI Workflow</span></div>
+      <div class="contact-grid">
+        <div class="contact"><span>EMAIL</span><strong>simbonggyo@gmail.com</strong></div>
+        <div class="contact"><span>GITHUB</span><strong>github.com/bong94688</strong></div>
+        <div class="contact"><span>BLOG</span><strong>velog.io/@bong9468</strong></div>
+        <div class="contact"><span>WEB</span><strong>potofolio-kappa.vercel.app</strong></div>
+      </div>
+    </div>
+    <div class="footer"><span>SIM BONGGYO</span><span>01 / 06</span></div>
+  </section>
+
+  <section class="page">
+    <div class="topline"><span class="eyebrow">PROFILE</span><span class="page-no">02 / 06</span></div>
+    <div class="section-title"><h2>일하는 방식</h2><p>도메인을 이해하고, 측정으로 병목을 찾고, 테스트와 검수 기록으로 결과를 증명합니다.</p></div>
+    <div class="metric-strip"><div class="metric"><b>40%</b><span>WL 배치 처리 개선</span></div><div class="metric"><b>50%</b><span>데이터 처리 향상</span></div><div class="metric"><b>99.9%</b><span>변환 정확도 유지</span></div><div class="metric"><b>20%</b><span>문장 오류 감소</span></div></div>
+    <div class="grid-2" style="margin-bottom:7mm">
+      <div class="card"><div class="num">01</div><h3>Domain First</h3><p>업무 규칙을 계층화하고 핵심 도메인 로직을 분리해 변경에 강한 구조를 설계합니다.</p></div>
+      <div class="card"><div class="num">02</div><h3>Performance by Evidence</h3><p>쿼리·인덱스·캐시·네트워크 설정을 측정하며 병목을 좁히고 성능을 개선합니다.</p></div>
+      <div class="card"><div class="num">03</div><h3>AI as a Pipeline</h3><p>규칙 문서, 개발 AI, 검수 AI, 테스트, 완료보고서를 하나의 반복 가능한 흐름으로 묶습니다.</p></div>
+      <div class="card"><div class="num">04</div><h3>End-to-End Ownership</h3><p>Spring 기반 서버부터 React 화면, 클라우드 배포와 운영 이슈까지 제품 전체를 연결합니다.</p></div>
+    </div>
+    <div class="principle"><b>RULE</b><p><strong>rule.md</strong>에 금융 도메인 규칙과 코딩 컨벤션을 고정해 AI 결과의 편차와 재작업을 줄입니다.</p></div>
+    <div class="principle"><b>REVIEW</b><p>작성 AI와 검수 AI를 분리하고, 발견 이슈·심각도·수정 여부를 검수보고서로 남깁니다.</p></div>
+    <div class="principle"><b>TEST</b><p>테스트 생성 → 실행 → 실패 분석 → 수정을 반복하며 통과한 변경만 완료 결과로 관리합니다.</p></div>
+    <div class="principle"><b>LEARN</b><p>반복되는 지적을 규칙 문서로 환류해 파이프라인이 돌수록 같은 실수를 줄입니다.</p></div>
+    <div style="margin-top:6mm">
+      <div class="stack-row"><strong>BACKEND</strong><span>Java · Spring Boot · Spring Framework · Python · Flask · Django · REST · GraphQL</span></div>
+      <div class="stack-row"><strong>FRONTEND</strong><span>React · TypeScript · JavaScript · Redux Toolkit · JSP · Thymeleaf</span></div>
+      <div class="stack-row"><strong>DATA / INFRA</strong><span>Redis · RDB · NCP · AWS · Docker · L4 Load Balancing · CI/CD</span></div>
+    </div>
+    <div class="footer"><span>FULL-STACK DEVELOPER</span><span>PROFILE & SKILLS</span></div>
+  </section>
+
+  <section class="page">
+    <div class="topline"><span class="eyebrow">EXPERIENCE</span><span class="page-no">03 / 06</span></div>
+    <div class="section-title"><h2>경력</h2><p>운영 안정성, 데이터 정확도, 처리 성능을 함께 개선해 온 실무 경험입니다.</p></div>
+    <div class="timeline">
+      <article class="job"><div class="job-head"><h3>(주)이엘온소프트</h3><small>2026.03 — PRESENT</small></div><div class="roleline">금융기술지원팀 · Full-Stack Developer</div><ul><li>AML 고객확인·위험평가·STR/CTR 및 FATCA/CRS 보고 로직과 화면 유지보수</li><li>국내외 제재·PEP 리스트 크롤러 추가, 파서 수정, 데이터 정제·중복 제거·변경분 반영 개선</li><li>WL 유사도 매칭과 결과 관리 기능을 보완하고 쿼리·인덱스를 최적화해 <strong>대용량 배치 처리 속도 약 40% 향상</strong></li><li>도메인 규칙 → 개발 → 독립 검수 → 테스트 → 보고서로 이어지는 AI 개발 파이프라인 구축</li></ul></article>
+      <article class="job"><div class="job-head"><h3>(주)파츠몰</h3><small>2025.02 — 2026.03</small></div><div class="roleline">전산팀 · Web Full-Stack Developer</div><ul><li>Redis FIFO 대기열과 UUID 기반 토큰 수명주기를 설계해 대규모 접속의 순서와 무결성 보장</li><li>폴링 3Hz·진입 간격 10초 조정, somaxconn 128→1024 튜닝, WAS 2대·Redis 1대 구조로 부하 분산</li><li>Spring·JSP·React 기반 부품 검색, 장바구니, B2B 견적·패키지 관리 화면 개발</li><li>AI 도구로 레거시 JSP 분석과 리팩터링, 신규 페이지 반복 작업을 단축</li></ul></article>
+      <article class="job"><div class="job-head"><h3>(주)아이페이지온</h3><small>2023.11 — 2024.12</small></div><div class="roleline">OSS 개발팀 · Backend Developer</div><ul><li>KT Message Gateway의 전체 초기화를 클러스터·컴포넌트·호스트 단위로 세분화</li><li>계층 데이터를 Redis에 캐싱해 반복 쿼리를 줄이고 Thymeleaf 관리자 화면으로 시각화</li><li>MSA의 CLI 블록을 개발하고 Tree 데이터를 Parent–Child 관계로 정규화해 중복 제거와 무결성 확보</li></ul></article>
+      <article class="job"><div class="job-head"><h3>아이쇼핑 Startup Team</h3><small>2023.01 — 2023.11</small></div><div class="roleline">Co-Founder · Backend Lead</div><ul><li>GPT 기반 문장 생성 파이프라인을 개선해 <strong>오류율 20% 감소, 가독성 30% 향상</strong></li><li>2진–10진 데이터 변환 로직으로 <strong>처리 속도 50% 향상, 정확도 99.9% 유지</strong></li><li>범정부 공공데이터 활용 창업경진대회 왕중왕전 <strong>국무총리상(대상)</strong></li></ul></article>
+    </div>
+    <div class="footer"><span>WORK EXPERIENCE</span><span>2023 — PRESENT</span></div>
+  </section>
+
+  <section class="page">
+    <div class="topline"><span class="eyebrow">FEATURED PROJECT / 01</span><span class="page-no">04 / 06</span></div>
+    <div class="project-hero">
+      <div><div class="project-kicker">BACKEND LEAD · CONTRIBUTION 50%</div><h2>Eye(I)Shopping</h2><p>시각장애인이 오프라인 매장에서 상품을 인식하고 안내받을 수 있도록 만든 AI 기반 쇼핑 지원 서비스입니다.</p><div class="tags"><span>Spring Boot</span><span>React</span><span>Flask</span><span>YOLOv5</span><span>GPT</span><span>NCP</span></div><p class="mono muted">2023.05 — 2023.11 · 5인 팀</p></div>
+      <img class="logo" src="src/assets/images/eyes(I)shopping/eye(I)shoppingicon.webp" alt="Eye(I)Shopping" />
+    </div>
+    <div class="detail-grid">
+      <div class="detail"><h3>문제와 접근</h3><p>사용자가 사진과 설정 정보를 전달하면 상품·매대를 인식하고 자연스러운 안내 문장으로 변환하는 흐름을 설계했습니다. Spring API, Flask 모델 서버, React 클라이언트를 NCP 환경에 통합했습니다.</p></div>
+      <div class="detail"><h3>담당 영역</h3><ul><li>Device ID 기반 인증과 접근 제어</li><li>사용자 설정 데이터의 비트 변환·저장</li><li>GPT 문장 생성 및 프롬프트 개선</li><li>상품 분류, 위치·방향 계산 API</li></ul></div>
+      <div class="detail"><h3>검증된 결과</h3><ul><li>문장 오류율 20% 감소</li><li>가독성 30% 향상</li><li>데이터 처리 속도 50% 향상</li><li>변환 정확도 99.9% 유지</li></ul></div>
+      <div class="detail"><h3>Recognition</h3><p>국민행복 서비스 발굴·창업 경진대회 보건복지부장관상(대상), 범정부 공공데이터 활용 창업경진대회 왕중왕전 국무총리상(대상).</p></div>
+    </div>
+    <div class="shot-grid">
+      <figure class="shot"><img src="src/assets/images/eyes(I)shopping/architecture.webp" alt="시스템 아키텍처"/><figcaption>01 · SYSTEM ARCHITECTURE</figcaption></figure>
+      <figure class="shot"><img src="src/assets/images/eyes(I)shopping/service2.webp" alt="상품 인식 화면"/><figcaption>02 · PRODUCT RECOGNITION</figcaption></figure>
+    </div>
+    <div class="footer"><span>github.com/eye-I-shopping/eye-I-Shopping</span><span>AWARD-WINNING PROJECT</span></div>
+  </section>
+
+  <section class="page">
+    <div class="topline"><span class="eyebrow">SELECTED PROJECTS</span><span class="page-no">05 / 06</span></div>
+    <div class="section-title"><h2>프로젝트</h2><p>인증, 실시간 통신, 클라우드 배포와 사용자 경험을 제품 단위로 연결했습니다.</p></div>
+    <div class="compact-projects">
+      <article class="card compact"><img class="icon" src="src/assets/images/mukjachi/mukjachiicon.webp" alt="맛자취"/><div class="project-kicker">CONTRIBUTION 70% · 2023.11—2024.02</div><h3>맛자취</h3><p>소상공인의 온라인·오프라인 판매와 예약 운영을 돕는 서비스입니다.</p><div class="tags"><span>Spring Boot</span><span>React</span><span>Redis</span><span>NCP</span></div><ul><li>JWT Access/Refresh Token 인증과 Redis 로그아웃 블랙리스트 구현</li><li>Socket.io 기반 예약 상태와 알림 실시간 전달</li><li>GPS 좌표를 활용한 주변 가게·랜드마크 검색</li><li>NCP 인프라 및 CI/CD 배포 흐름 구축</li></ul></article>
+      <article class="card compact"><img class="icon" src="src/assets/images/couple/coupleicon.webp" alt="Bit-O"/><div class="project-kicker">CONTRIBUTION 50% · 2024.09—</div><h3>Bit-O</h3><p>기념일 관리, D-day, 맞춤 데이트 장소 추천을 제공하는 커플 서비스입니다.</p><div class="tags"><span>Spring Boot</span><span>React</span><span>GraphQL</span><span>AWS</span></div><ul><li>REST와 GraphQL을 함께 제공하는 백엔드 API 설계</li><li>위치·선호도 기반 데이트 장소 추천</li><li>Access/Refresh Token 교체를 통한 인증 강화</li><li>AWS 기반 배포와 확장 가능한 인프라 구성</li></ul></article>
+      <article class="card compact"><div class="num">OPS</div><div class="project-kicker">PRODUCTION SYSTEM</div><h3>파트존 대기열</h3><p>동시 접속 상황에서 서비스 진입 순서를 보장하고 서버 부하를 제어했습니다.</p><div class="tags"><span>Redis</span><span>Spring</span><span>Docker</span><span>L4</span></div><ul><li>FIFO 큐와 c_token / wait_token 수명주기 설계</li><li>비정상 종료 사용자 검출로 순번 정확성 유지</li><li>커널 backlog와 polling 간격 최적화</li><li>다중 WAS 및 Redis 구성으로 가용성 확보</li></ul></article>
+      <article class="card compact"><div class="num">AI</div><div class="project-kicker">ENGINEERING WORKFLOW</div><h3>검증형 AI 파이프라인</h3><p>빠른 코드 생성보다 반복해서 신뢰할 수 있는 결과를 만드는 개발 흐름입니다.</p><div class="tags"><span>Rule Docs</span><span>Review AI</span><span>Test</span><span>Reports</span></div><ul><li>금융 도메인 규칙과 코딩 컨벤션을 문서로 고정</li><li>개발 AI와 검수 AI를 분리해 독립 관점 확보</li><li>테스트 실패 원인 분석과 수정 반복 자동화</li><li>검수·완료보고서로 변경 범위와 잔여 리스크 기록</li></ul></article>
+    </div>
+    <div class="footer"><span>PROJECTS & ENGINEERING</span><span>05 / 06</span></div>
+  </section>
+
+  <section class="page">
+    <div class="topline"><span class="eyebrow">BACKGROUND & CONTACT</span><span class="page-no">06 / 06</span></div>
+    <div class="closing">
+      <div class="eyebrow">BUILD · VERIFY · IMPROVE</div>
+      <h2>제품 전체를 이해하고,<br/><span class="accent">검증 가능한 개선</span>을 만듭니다.</h2>
+      <p>도메인 지식이 코드와 테스트, 운영 기록으로 남도록 설계합니다. 팀이 오래 다룰 수 있는 시스템과 개발 흐름을 만드는 개발자가 되겠습니다.</p>
+      <div class="grid-2" style="width:160mm;margin-bottom:8mm">
+        <div class="card"><h3>Education</h3><p>한국HRD원격평생교육원 · 컴퓨터공학 학사 과정<br/>인하공업전문대학 · 컴퓨터시스템과 전문학사</p></div>
+        <div class="card"><h3>Training</h3><p>네이버 클라우드 교육 수료<br/>구로청년이룸 ‘코-취’ 우수 수료<br/>원티드 프리온보딩 백엔드 인턴십</p></div>
+      </div>
+      <div class="codebox"><span class="key">const</span> contact = {<br/>  email: <span class="str">"simbonggyo@gmail.com"</span>,<br/>  github: <span class="str">"github.com/bong94688"</span>,<br/>  blog: <span class="str">"velog.io/@bong9468"</span>,<br/>  portfolio: <span class="str">"potofolio-kappa.vercel.app"</span><br/>};</div>
+    </div>
+    <div class="footer"><span>THANK YOU</span><span>SIM BONGGYO · 2026</span></div>
+  </section>
+</body>
+</html>
